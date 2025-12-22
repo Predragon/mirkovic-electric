@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirkovic Electric | Licensed Bay Area Electricians Since 1991</title>
+    <meta name="description" content="Tesla-approved electrician serving Bay Area since 1991. Licensed C-10 627414. EV charging, residential & commercial electrical services.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}:root{--electric-blue:#00d4ff;--deep-blue:#0a1628;--accent-yellow:#ffd700;--text-light:#fff;--text-gray:#a0aec0}body{font-family:Inter,-apple-system,sans-serif;background:var(--deep-blue);color:var(--text-light);overflow-x:hidden;line-height:1.6}.container{max-width:1400px;margin:0 auto;padding:0 2rem}header{position:fixed;top:0;width:100%;z-index:1000;background:rgba(10,22,40,.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,212,255,.1)}.nav{display:flex;justify-content:space-between;align-items:center;padding:1.2rem 2rem}.logo{display:flex;align-items:center;gap:.5rem;font-size:1.5rem;font-weight:800;text-decoration:none;color:var(--text-light)}.logo-icon{background:linear-gradient(135deg,var(--electric-blue),var(--accent-yellow));-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-size:1.8rem}.nav-toggle{display:none;flex-direction:column;gap:4px;background:0 0;border:none;cursor:pointer}.nav-toggle span{width:25px;height:3px;background:var(--electric-blue);transition:.3s}.nav-menu{display:flex;gap:2.5rem;list-style:none;align-items:center}.nav-menu a{color:var(--text-light);text-decoration:none;font-weight:500;position:relative;transition:color .3s}.nav-menu a:not(.btn)::after{content:'';position:absolute;bottom:-5px;left:0;width:0;height:2px;background:var(--electric-blue);transition:width .3s}.nav-menu a:not(.btn):hover{color:var(--electric-blue)}.nav-menu a:not(.btn):hover::after{width:100%}.btn{padding:.7rem 1.8rem;border-radius:50px;text-decoration:none;font-weight:700;transition:all .3s;display:inline-block;border:none;cursor:pointer;font-size:1rem}.btn-primary{background:linear-gradient(135deg,var(--electric-blue),#09c);color:var(--deep-blue);box-shadow:0 4px 15px rgba(0,212,255,.3)}.btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 25px rgba(0,212,255,.5)}.btn-outline{background:0 0;color:var(--text-light);border:2px solid var(--electric-blue)}.btn-outline:hover{background:var(--electric-blue);color:var(--deep-blue)}.btn-lg{padding:1rem 2.5rem;font-size:1.1rem}.btn-full{width:100%}.hero{padding:180px 0 120px}.hero-content{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}.hero-text h1{font-size:4.5rem;font-weight:900;line-height:1.1;margin-bottom:1.5rem;background:linear-gradient(135deg,var(--text-light),var(--electric-blue));-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:fadeInUp .8s}.hero-text p{font-size:1.3rem;color:var(--text-gray);margin-bottom:2.5rem;animation:fadeInUp .8s .2s backwards}.hero-buttons{display:flex;gap:1.5rem;margin-bottom:3rem;animation:fadeInUp .8s .4s backwards}.hero-trust{display:flex;gap:2rem;animation:fadeInUp .8s .6s backwards}.trust-item{display:flex;align-items:center;gap:.5rem;font-weight:600}.trust-icon{color:var(--accent-yellow);font-size:1.3rem}.hero-image{animation:fadeInUp .8s .4s backwards}.badge-section{display:flex;gap:2rem;margin-top:3rem;animation:fadeInUp .8s .8s backwards}.badge{background:rgba(0,212,255,.1);border:1px solid rgba(0,212,255,.3);padding:1rem 2rem;border-radius:15px}.badge-title{font-size:.9rem;color:var(--text-gray);margin-bottom:.3rem}.badge-value{font-size:1.5rem;font-weight:800;color:var(--electric-blue)}.services{padding:120px 0}.section-title{font-size:3rem;font-weight:900;text-align:center;margin-bottom:1rem}.section-subtitle{text-align:center;color:var(--text-gray);font-size:1.2rem;margin-bottom:5rem}.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem}.service-card{background:rgba(255,255,255,.03);border:1px solid rgba(0,212,255,.2);border-radius:20px;padding:2.5rem;transition:all .4s;position:relative;overflow:hidden}.service-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,rgba(0,212,255,.1),transparent);opacity:0;transition:opacity .4s}.service-card:hover{transform:translateY(-10px);border-color:var(--electric-blue);box-shadow:0 20px 40px rgba(0,212,255,.2)}.service-card:hover::before{opacity:1}.s
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="nav container">
+            <a href="#" class="logo"><span class="logo-icon">⚡</span><span>Mirkovic Electric</span></a>
+            <button class="nav-toggle" onclick="document.getElementById('navMenu').classList.toggle('active')"><span></span><span></span><span></span></button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
+                <li><a href="#contact" class="btn btn-primary">Get Free Quote</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>Powering the Bay Area Since 1991</h1>
+                    <p>Licensed and insured electricians serving residential and commercial properties. Tesla-approved for EV charging installations. Available 24/7 for emergencies.</p>
+                    <div class="hero-buttons">
+                        <a href="tel:4089002672" class="btn btn-primary btn-lg">📞 (408) 900-2672</a>
+                        <a href="https://squareup.com/appointments/book/0k2h4srs01tbwc/9HYEMR8VN4RCE/start" class="btn btn-outline btn-lg" target="_blank">Book Online</a>
+                    </div>
+                    <div class="hero-trust">
+                        <div class="trust-item"><span class="trust-icon">✓</span><span>Licensed & Insured</span></div>
+                        <div class="trust-item"><span class="trust-icon">✓</span><span>24/7 Emergency</span></div>
+                        <div class="trust-item"><span class="trust-icon">✓</span><span>Tesla Approved</span></div>
+                    </div>
+                    <div class="badge-section">
+                        <div class="badge"><div class="badge-title">Licensed</div><div class="badge-value">C-10 627414</div></div>
+                        <div class="badge"><div class="badge-title">Established</div><div class="badge-value">1991</div></div>
+                        <div class="badge"><div class="badge-title">Coverage</div><div class="badge-value">Bay Area</div></div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div style="background:linear-gradient(135deg,rgba(0,212,255,.2),rgba(255,215,0,.2));border-radius:20px;padding:4rem;text-align:center"><div style="font-size:10rem;opacity:.3">⚡</div></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="section-title">Comprehensive Electrical Solutions</h2>
+                <p class="section-subtitle">Professional services for every electrical need</p>
+                <div class="services-grid">
+                    <div class="service-card"><div class="service-icon">🔋</div><h3>Level 2 EV Chargers</h3><p>Tesla-approved installations. Creative home charging solutions to save time and money.</p></div>
+                    <div class="service-card"><div class="service-icon">🏠</div><h3>Residential Services</h3><p>Complete home electrical services including wiring, panel upgrades, lighting, and repairs.</p></div>
+                    <div class="service-card"><div class="service-icon">🏢</div><h3>Commercial & Industrial</h3><p>Office, retail, and industrial electrical installations with smart energy monitoring.</p></div>
+                    <div class="service-card"><div class="service-icon">🔌</div><h3>Power Loss & Troubleshooting</h3><p>From service entrance to receptacles, we diagnose and fix issues efficiently.</p></div>
+                    <div class="service-card"><div class="service-icon">⚙️</div><h3>Panel Upgrades</h3><p>Main service panels and sub-panels with smart energy monitoring capabilities.</p></div>
+                    <div class="service-card"><div class="service-icon">💡</div><h3>LED Lighting</h3><p>New installation or upgrade to dimmable multi-color LED recessed lighting.</p></div>
+                    <div class="service-card"><div class="service-icon">🏡</div><h3>Backup Generators</h3><p>Whole-house and business generator installation for uninterrupted power.</p></div>
+                    <div class="service-card"><div class="service-icon">📺</div><h3>Audio & Data Cabling</h3><p>Practical to high-end audiophile hardwired solutions for all media needs.</p></div>
+                    <div class="service-card"><div class="service-icon">🚨</div><h3>24/7 Emergency</h3><p>Fast response for urgent electrical repairs and troubleshooting anytime.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container about-content">
+                <div class="about-image"><div style="background:linear-gradient(135deg,rgba(0,212,255,.2),rgba(255,215,0,.2));border-radius:20px;padding:4rem;text-align:center"><div style="font-size:8rem;opacity:.3">🛠️</div></div></div>
+                <div class="about-text">
+                    <h2>Why Choose Mirkovic Electric?</h2>
+                    <p>Serving the Bay Area since 1991 with quality workmanship, honest pricing, and exceptional service. Tesla-approved for modern electrical solutions.</p>
+                    <ul class="about-list">
+                        <li><strong>Licensed & Insured</strong>Full protection for your property (License C-10 627414)</li>
+                        <li><strong>Tesla Approved</strong>Certified for EV charging installations</li>
+                        <li><strong>Upfront Pricing</strong>No hidden fees or surprises</li>
+                        <li><strong>Quality Guaranteed</strong>We stand behind our work</li>
+                        <li><strong>Clean & Professional</strong>Respect for your property</li>
+                        <li><strong>34+ Years Experience</strong>Trusted expertise since 1991</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary btn-lg">Get Started Today</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <p class="section-subtitle">Trusted by homeowners and businesses across the Bay Area</p>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Excellent work! They upgraded our panel and installed a Tesla charger. Professional, clean, and finished ahead of schedule."</p><div class="testimonial-author"><strong>Michael R.</strong><span>Homeowner - San Jose</span></div></div>
+                    <div class="testimonial-card"><div class="stars">★★★★★</div><p>"Called for an emergency late at night and they were there within an hour. Fixed the problem quickly and fairly priced."</p><div class="testimonial-author"><strong>Sarah T.</strong><span>Homeowner - Palo Alto</span></div></div>
+                    <div class="testimonial-card"><div class="stars">★★★★★</div><p>"We use Mirkovic Electric for all our properties. Reliable, professional, and always get the job done right."</p><div class="testimonial-author"><strong>David K.</strong><span>Property Manager - Mountain View</span></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container contact-content">
+                <div class="contact-info">
+                    <h2>Get Your Free Estimate</h2>
+                    <p>Contact us today for a free, no-obligation estimate on your electrical project.</p>
+                    <div class="contact-methods">
+                        <a href="tel:4089002672" class="contact-method"><span class="contact-icon">📞</span><div><strong>Call Us</strong><span>(408) 900-2672</span></div></a>
+                        <a href="mailto:info@mirkovicelectric.com" class="contact-method"><span class="contact-icon">✉️</span><div><strong>Email</strong><span>info@mirkovicelectric.com</span></div></a>
+                        <div class="contact-method"><span class="contact-icon">📍</span><div><strong>Service Area</strong><span>Bay Area, California</span></div></div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="tel" name="phone" placeholder="Phone Number" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    <select name="service" required>
+                        <option value="">Select Service</option>
+                        <option value="ev">EV Charging Installation</option>
+                        <option value="residential">Residential Electrical</option>
+                        <option value="commercial">Commercial/Industrial</option>
+                        <option value="panel">Panel Upgrade</option>
+                        <option value="emergency">Emergency Service</option>
+                        <option value="lighting">Lighting Installation</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <textarea name="message" placeholder="Tell us about your project" rows="4"></textarea>
+                    <button type="submit" class="btn btn-primary btn-lg btn-full">Send Request</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content container">
+            <div class="footer-brand"><a href="#" class="logo"><span class="logo-icon">⚡</span><span>Mirkovic Electric</span></a><p>Providing reliable electrical services to the Bay Area since 1991. Licensed, insured, and bonded.</p><p>License: C-10 627414</p></div>
+            <div class="footer-links"><h4>Services</h4><ul><li><a href="#services">EV Charging</a></li><li><a href="#services">Residential</a></li><li><a href="#services">Commercial</a></li><li><a href="#services">Emergency</a></li></ul></div>
+            <div class="footer-links"><h4>Company</h4><ul><li><a href="#about">About Us</a></li><li><a href="#testimonials">Reviews</a></li><li><a href="#contact">Contact</a></li><li><a href="https://squareup.com/appointments/book/0k2h4srs01tbwc/9HYEMR8VN4RCE/start" target="_blank">Book Service</a></li></ul></div>
+            <div class="footer-contact"><h4>Contact</h4><p>📞 (408) 900-2672</p><p>✉️ info@mirkovicelectric.com</p><p>📍 Bay Area, CA</p></div>
+        </div>
+        <div class="footer-bottom container"><p>© 1991-2025 Mirkovic Electric. All rights reserved.</p></div>
+    </footer>
+</body>
+</html>
