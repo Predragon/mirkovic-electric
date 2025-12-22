@@ -3,28 +3,26 @@ function toggleTheme() {
     const body = document.body;
     const darkIcon = document.getElementById('darkIcon');
     const lightIcon = document.getElementById('lightIcon');
-    
-    // Toggle theme class
+
     body.classList.toggle('light-theme');
-    
-    // Toggle icon active states
     darkIcon.classList.toggle('active');
     lightIcon.classList.toggle('active');
-    
-    // Save preference in memory (no localStorage)
-    window.currentTheme = body.classList.contains('light-theme') ? 'light' : 'dark';
+
+    // Persist preference
+    localStorage.setItem('theme', body.classList.contains('light-theme') ? 'light' : 'dark');
 }
 
 // Initialize theme on page load
 document.addEventListener('DOMContentLoaded', () => {
-    // Default to dark theme
-    window.currentTheme = 'dark';
-    
-    // You could add auto-detection based on system preference here:
-    // const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    // if (!prefersDark) {
-    //     toggleTheme();
-    // }
+    const saved = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    // Apply saved theme or system preference
+    if (saved === 'light' || (!saved && !prefersDark)) {
+        document.body.classList.add('light-theme');
+        document.getElementById('darkIcon').classList.remove('active');
+        document.getElementById('lightIcon').classList.add('active');
+    }
 });
 
 // Mobile Navigation Toggle
