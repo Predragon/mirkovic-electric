@@ -63,8 +63,8 @@ export default function ContactForm() {
     setIsSubmitting(true)
 
     try {
-      // Submit to GoHighLevel
-      const response = await fetch('https://api.leadconnectorhq.com/widget/form/O2BgIkUyRcytJ2XQaUrF', {
+      // Submit to backend API which proxies to GoHighLevel
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -74,22 +74,18 @@ export default function ContactForm() {
           lastName: formData.name.split(' ').slice(1).join(' ') || '',
           email: formData.email,
           phone: formData.phone,
-          Service: formData.service || 'Not specified',
-          projectDetails: formData.message || '',
+          service: formData.service || 'Not specified',
+          message: formData.message || '',
         }),
       })
 
-      const text = await response.text()
+      const result = await response.json()
 
-      // Log for debugging
-      console.log('GHL Response:', { status: response.status, body: text })
-
-      // Accept 2xx and 3xx as success
-      if (response.ok || response.status < 400) {
+      if (response.ok && result.success) {
         setIsSubmitted(true)
         setFormData({ name: '', email: '', phone: '', service: '', message: '' })
       } else {
-        throw new Error(`API returned ${response.status}`)
+        throw new Error(result.error || 'Submission failed')
       }
     } catch (error) {
       console.error('Form submission error:', error)
