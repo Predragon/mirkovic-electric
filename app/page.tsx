@@ -3,197 +3,213 @@ import Image from 'next/image'
 
 export const metadata = {
   title: 'Mirkovic Electric | Licensed Bay Area Electrical Contractor',
-  description: 'Modern electrical solutions for high-demand residential and commercial properties. EV charging, load management, smart panels, permits, and audio systems.',
+  description: 'Modern electrical solutions for high-demand residential and commercial properties. EV charging, load management, smart panels, permits, and audio systems. Licensed Bay Area Electrician Since 1991.',
 }
 
 export default function Home() {
   return (
     <div className="w-full">
-      {/* Hero Section with Background */}
-      <section className="relative min-h-[600px] flex items-center">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/hero-bg.png"
-            alt="Modern electrical solutions"
-            fill
-            className="object-cover object-top"
-            priority
-          />
-          <div className="absolute inset-0 bg-navy-900/70" />
-        </div>
-
-        <div className="container-max relative z-10 py-20 text-center text-white">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-            Modern Electrical Solutions
-          </h1>
-          <p className="text-2xl md:text-3xl text-accent-400 font-semibold mb-6">
-            for Today's High-Demand Properties
-          </p>
-          <p className="text-lg md:text-xl text-gray-200 mb-4 max-w-3xl mx-auto">
-            EV Charging | Smart Panels | Load Management | Permits & PG&E Coordination | Audiophile Systems
-          </p>
-          <p className="text-sm text-gray-300 mb-8">
-            Licensed Bay Area Electrical Contractor Since 1991
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/contact/"
-              className="px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white rounded-lg font-bold text-lg transition-colors shadow-lg"
-            >
-              Get a Quote
-            </Link>
-            <a
-              href="tel:(408)900-2672"
-              className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-bold text-lg transition-colors shadow-lg"
-            >
-              Call or Text
-            </a>
-          </div>
-          <p className="text-gray-300 mt-6 text-sm">
-            Call or Text: <a href="tel:(408)900-2672" className="font-semibold hover:text-accent-400">(408) 900-2672</a>
-          </p>
-        </div>
+      {/* Hero Section - Full width image from mockup */}
+      <section className="relative">
+        <Image
+          src="/images/hero-section.jpg"
+          alt="Modern Electrical Solutions for Today's High-Demand Properties - EV Charging, Smart Panels, Load Management"
+          width={1536}
+          height={430}
+          className="w-full h-auto"
+          priority
+        />
+        {/* Clickable overlay areas for the buttons */}
+        <Link
+          href="/contact/"
+          className="absolute bottom-[15%] left-[32%] w-[14%] h-[12%] z-10"
+          aria-label="Get a Quote"
+        />
+        <a
+          href="tel:(408)900-2672"
+          className="absolute bottom-[15%] left-[48%] w-[14%] h-[12%] z-10"
+          aria-label="Book Service - Call (408) 900-2672"
+        />
       </section>
 
       {/* Service Icons Bar */}
-      <section className="bg-gray-100 py-8 border-b border-gray-200">
+      <section className="bg-gradient-to-b from-gray-100 to-gray-50 py-8 border-b border-gray-200">
         <div className="container-max">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-            <Link href="/services/ev-charging/" className="group">
-              <div className="text-4xl mb-2">⚡</div>
-              <p className="font-semibold text-navy-600 group-hover:text-accent-500 transition-colors">EV Charging Solutions</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <Link href="/services/ev-charging/" className="flex flex-col items-center group">
+              <Image
+                src="/images/icons/ev-charging-icon.png"
+                alt="EV Charging Solutions"
+                width={100}
+                height={80}
+                className="mb-2 group-hover:scale-105 transition-transform"
+              />
+              <span className="font-semibold text-navy-700 text-center text-sm md:text-base group-hover:text-accent-500 transition-colors">
+                EV Charging Solutions
+              </span>
             </Link>
-            <Link href="/services/smart-panels/" className="group">
-              <div className="text-4xl mb-2">📊</div>
-              <p className="font-semibold text-navy-600 group-hover:text-accent-500 transition-colors">Smart Electrical Panels</p>
+            <Link href="/services/smart-panels/" className="flex flex-col items-center group">
+              <Image
+                src="/images/icons/smart-panels-icon.png"
+                alt="Smart Electrical Panels"
+                width={100}
+                height={80}
+                className="mb-2 group-hover:scale-105 transition-transform"
+              />
+              <span className="font-semibold text-navy-700 text-center text-sm md:text-base group-hover:text-accent-500 transition-colors">
+                Smart Electrical Panels
+              </span>
             </Link>
-            <Link href="/services/permits-pge/" className="group">
-              <div className="text-4xl mb-2">📋</div>
-              <p className="font-semibold text-navy-600 group-hover:text-accent-500 transition-colors">Permits & PG&E Coordination</p>
+            <Link href="/services/permits-pge/" className="flex flex-col items-center group">
+              <Image
+                src="/images/icons/permits-icon.png"
+                alt="Permits & PG&E Coordination"
+                width={100}
+                height={80}
+                className="mb-2 group-hover:scale-105 transition-transform"
+              />
+              <span className="font-semibold text-navy-700 text-center text-sm md:text-base group-hover:text-accent-500 transition-colors">
+                Permits & PG&E Coordination
+              </span>
             </Link>
-            <Link href="/services/audio-systems/" className="group">
-              <div className="text-4xl mb-2">🔊</div>
-              <p className="font-semibold text-navy-600 group-hover:text-accent-500 transition-colors">Audiophile Systems</p>
+            <Link href="/services/audio-systems/" className="flex flex-col items-center group">
+              <Image
+                src="/images/icons/audio-icon.png"
+                alt="Audiophile Systems"
+                width={100}
+                height={80}
+                className="mb-2 group-hover:scale-105 transition-transform"
+              />
+              <span className="font-semibold text-navy-700 text-center text-sm md:text-base group-hover:text-accent-500 transition-colors">
+                Audiophile Systems
+              </span>
             </Link>
           </div>
         </div>
       </section>
 
       {/* Our Services Section */}
-      <section className="section-padding bg-white">
+      <section className="py-12 bg-gradient-to-b from-gray-50 to-white">
         <div className="container-max">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-navy-700 mb-4">Our Services</h2>
-            <p className="text-xl text-brand-400">Experienced & Reliable Electrical Contracting</p>
+          <div className="text-center mb-10">
+            <div className="flex items-center justify-center gap-4 mb-3">
+              <div className="h-px bg-gray-300 w-16 md:w-24"></div>
+              <h2 className="text-2xl md:text-3xl font-bold text-navy-800">Our Services</h2>
+              <div className="h-px bg-gray-300 w-16 md:w-24"></div>
+            </div>
+            <p className="text-gray-600 text-lg">Experienced & Reliable Electrical Contracting</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: 'EV Charging & Load Management',
-                description: 'Tesla and universal EV chargers, dynamic load management, service capacity evaluation and optimization.',
-                href: '/services/ev-charging/',
-                image: '/images/services/ev-charging.png',
-              },
-              {
-                title: 'Smart Electrical Panels',
-                description: 'SPAN smart panels, circuit-level monitoring, EV, solar, and battery integration.',
-                href: '/services/smart-panels/',
-                image: '/images/services/smart-panels.png',
-              },
-              {
-                title: 'Permits & PG&E Coordination',
-                description: 'Permit applications, PG&E service coordination, load calculations, and inspection support.',
-                href: '/services/permits-pge/',
-                image: '/images/services/permits-pge.png',
-              },
-              {
-                title: 'Load Management & Power Planning',
-                description: 'Electrical capacity planning for properties with increasing power demands.',
-                href: '/services/load-management/',
-                image: '/images/services/load-management.png',
-              },
-              {
-                title: 'Audiophile Audio Systems',
-                description: 'Reference-grade speaker wiring, bit-perfect multi-room audio, custom network design.',
-                href: '/services/audio-systems/',
-                image: '/images/services/audio-systems.png',
-              },
-              {
-                title: 'Panel Upgrades & Infrastructure',
-                description: 'Main panels, sub-panels, service relocations, dedicated circuits, remodel support.',
-                href: '/services/',
-                image: '/images/services/smart-panels.png',
-              },
-            ].map((service) => (
-              <Link
-                key={service.title}
-                href={service.href}
-                className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all border border-gray-100"
-              >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <Link href="/services/smart-panels/" className="group">
+              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow border border-gray-100">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src={service.image}
-                    alt={service.title}
+                    src="/images/cards/panel-upgrades.jpg"
+                    alt="Panel Upgrades"
                     fill
-                    className="object-cover object-top group-hover:scale-105 transition-transform duration-300"
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-lg font-bold text-navy-700 mb-2 group-hover:text-accent-500 transition-colors">
-                    {service.title}
+                <div className="p-4 text-center bg-white">
+                  <h3 className="font-bold text-navy-800 text-lg group-hover:text-accent-500 transition-colors">
+                    Panel Upgrades
                   </h3>
-                  <p className="text-brand-400 text-sm">{service.description}</p>
                 </div>
-              </Link>
-            ))}
+              </div>
+            </Link>
+
+            <Link href="/services/ev-charging/" className="group">
+              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow border border-gray-100">
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src="/images/cards/ev-installations.jpg"
+                    alt="EV Charger Installations"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-4 text-center bg-white">
+                  <h3 className="font-bold text-navy-800 text-lg group-hover:text-accent-500 transition-colors">
+                    EV Charger Installations
+                  </h3>
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/services/" className="group">
+              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow border border-gray-100">
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src="/images/cards/troubleshooting.jpg"
+                    alt="Troubleshooting & Repairs"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-4 text-center bg-white">
+                  <h3 className="font-bold text-navy-800 text-lg group-hover:text-accent-500 transition-colors">
+                    Troubleshooting & Repairs
+                  </h3>
+                </div>
+              </div>
+            </Link>
           </div>
 
-          <div className="text-center mt-12">
-            <Link href="/services/" className="text-accent-500 font-semibold hover:text-accent-600 text-lg">
-              View All Services →
+          <div className="text-center mt-10">
+            <Link
+              href="/services/"
+              className="inline-block px-8 py-3 bg-accent-500 hover:bg-accent-600 text-white rounded font-bold transition-colors"
+            >
+              View All Services
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Why Work With Us */}
-      <section className="section-padding bg-navy-600 text-white">
+      {/* Why Choose Us Section */}
+      <section className="py-12 bg-navy-700 text-white">
         <div className="container-max">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Why Work With Mirkovic Electric</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">Why Choose Mirkovic Electric</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             <div className="text-center">
-              <div className="text-5xl font-bold text-accent-400 mb-3">C-10</div>
-              <p className="font-semibold text-xl mb-2">Licensed Contractor</p>
-              <p className="text-gray-300 text-sm">California C-10 Electrical License #627414. Fully insured and bonded.</p>
+              <div className="text-4xl font-bold text-accent-400 mb-2">C-10</div>
+              <p className="font-semibold text-lg mb-1">Licensed Contractor</p>
+              <p className="text-gray-300 text-sm">California C-10 License #627414<br/>Fully Insured & Bonded</p>
             </div>
             <div className="text-center">
-              <div className="text-5xl mb-3">🔧</div>
-              <p className="font-semibold text-xl mb-2">Design-Driven Approach</p>
-              <p className="text-gray-300 text-sm">We plan electrical systems around your goals, not the other way around.</p>
+              <div className="text-4xl mb-2">🏆</div>
+              <p className="font-semibold text-lg mb-1">Since 1991</p>
+              <p className="text-gray-300 text-sm">30+ Years of Experience<br/>Trusted Bay Area Electrician</p>
             </div>
             <div className="text-center">
-              <div className="text-5xl mb-3">📍</div>
-              <p className="font-semibold text-xl mb-2">Bay Area Expertise</p>
-              <p className="text-gray-300 text-sm">Deep experience with Bay Area permitting, codes, and utility coordination.</p>
+              <div className="text-4xl mb-2">📍</div>
+              <p className="font-semibold text-lg mb-1">Local Expertise</p>
+              <p className="text-gray-300 text-sm">Bay Area Permitting & Codes<br/>PG&E Coordination Specialist</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Service Areas & CTA */}
-      <section className="section-padding bg-gray-50">
+      <section className="py-12 bg-gray-100">
         <div className="container-max text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-navy-700 mb-6">Service Areas</h2>
-          <p className="text-lg text-brand-400 mb-8 max-w-2xl mx-auto">
-            Serving San Jose, Palo Alto, Menlo Park, Cupertino, San Mateo, and the greater Bay Area.
+          <h2 className="text-2xl md:text-3xl font-bold text-navy-800 mb-4">Service Areas</h2>
+          <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+            Proudly serving San Jose, Palo Alto, Menlo Park, Cupertino, San Mateo, and the greater Bay Area.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/contact/" className="px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white rounded-lg font-bold text-lg transition-colors">
-              Get Started Today
+            <Link
+              href="/contact/"
+              className="px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white rounded font-bold text-lg transition-colors"
+            >
+              Get a Quote
             </Link>
-            <a href="tel:(408)900-2672" className="px-8 py-4 bg-navy-600 hover:bg-navy-700 text-white rounded-lg font-bold text-lg transition-colors">
-              (408) 900-2672
+            <a
+              href="tel:(408)900-2672"
+              className="px-8 py-4 bg-navy-600 hover:bg-navy-700 text-white rounded font-bold text-lg transition-colors"
+            >
+              Call: (408) 900-2672
             </a>
           </div>
         </div>
