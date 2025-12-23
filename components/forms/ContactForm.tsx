@@ -63,27 +63,24 @@ export default function ContactForm() {
     setIsSubmitting(true)
 
     try {
-      // Submit to Web3Forms (free form service)
-      const response = await fetch('https://api.web3forms.com/submit', {
+      // Submit to GoHighLevel
+      const response = await fetch('https://api.leadconnectorhq.com/widget/form/O2BgIkUyRcytJ2XQaUrF', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          access_key: 'YOUR_WEB3FORMS_KEY', // Replace with actual key
-          subject: `New Contact from ${formData.name} - Mirkovic Electric`,
-          from_name: 'Mirkovic Electric Website',
-          name: formData.name,
+          firstName: formData.name.split(' ')[0],
+          lastName: formData.name.split(' ').slice(1).join(' ') || '',
           email: formData.email,
           phone: formData.phone,
-          service: formData.service || 'Not specified',
-          message: formData.message || 'No message provided',
+          message: `Service: ${formData.service || 'Not specified'}\n\n${formData.message}`,
         }),
       })
 
       const result = await response.json()
 
-      if (result.success) {
+      if (response.ok) {
         setIsSubmitted(true)
         setFormData({ name: '', email: '', phone: '', service: '', message: '' })
       } else {
@@ -91,10 +88,7 @@ export default function ContactForm() {
       }
     } catch (error) {
       console.error('Form submission error:', error)
-      // For now, show success anyway since the form key isn't configured
-      // Remove this once Web3Forms key is added
-      setIsSubmitted(true)
-      setFormData({ name: '', email: '', phone: '', service: '', message: '' })
+      setSubmitError('Failed to submit form. Please try calling (408) 900-2672 instead.')
     } finally {
       setIsSubmitting(false)
     }
