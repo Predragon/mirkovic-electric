@@ -79,9 +79,13 @@ export default function ContactForm() {
         }),
       })
 
+      if (!response.ok) {
+        throw new Error(`Server error: ${response.status}`)
+      }
+
       const result = await response.json()
 
-      if (response.ok && result.success) {
+      if (result.success) {
         setIsSubmitted(true)
         setFormData({ name: '', email: '', phone: '', service: '', message: '' })
       } else {

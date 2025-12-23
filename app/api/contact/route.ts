@@ -4,7 +4,7 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
 
-    const response = await fetch('https://api.leadconnectorhq.com/widget/form/O2BgIkUyRcytJ2XQaUrF', {
+    const ghlResponse = await fetch('https://api.leadconnectorhq.com/widget/form/O2BgIkUyRcytJ2XQaUrF', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -19,11 +19,18 @@ export async function POST(request: NextRequest) {
       }),
     })
 
-    const text = await response.text()
-    console.log('GHL Response:', { status: response.status, body: text })
+    const responseText = await ghlResponse.text()
+    console.log('GHL Response:', { status: ghlResponse.status, statusText: ghlResponse.statusText, body: responseText })
 
-    // Accept any response from GHL as success
-    return NextResponse.json({ success: true }, { status: 200 })
+    // GHL returns 200 even on success - just check if response was received
+    if (ghlResponse.ok || ghlResponse.status === 200) {
+      return NextResponse.json({ success: true }, { status: 200 })
+    } else {
+      return NextResponse.json(
+        { success: false, error: `GHL API returned ${ghlResponse.status}` },
+        { status: 400 }
+      )
+    }
   } catch (error) {
     console.error('API contact error:', error)
     return NextResponse.json(
