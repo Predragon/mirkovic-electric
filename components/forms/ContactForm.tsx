@@ -70,21 +70,26 @@ export default function ContactForm() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          firstName: formData.name.split(' ')[0],
+          firstName: formData.name.split(' ')[0] || 'Unknown',
           lastName: formData.name.split(' ').slice(1).join(' ') || '',
           email: formData.email,
           phone: formData.phone,
-          message: `Service: ${formData.service || 'Not specified'}\n\n${formData.message}`,
+          Service: formData.service || 'Not specified',
+          projectDetails: formData.message || '',
         }),
       })
 
-      const result = await response.json()
+      const text = await response.text()
 
-      if (response.ok) {
+      // Log for debugging
+      console.log('GHL Response:', { status: response.status, body: text })
+
+      // Accept 2xx and 3xx as success
+      if (response.ok || response.status < 400) {
         setIsSubmitted(true)
         setFormData({ name: '', email: '', phone: '', service: '', message: '' })
       } else {
-        throw new Error(result.message || 'Submission failed')
+        throw new Error(`API returned ${response.status}`)
       }
     } catch (error) {
       console.error('Form submission error:', error)
