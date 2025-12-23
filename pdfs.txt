@@ -1,0 +1,474 @@
+Mirkovic Electric — Website Developer Brief
+Objective
+Build a modern, fast, low-maintenance website that reflects Mirkovic Electric’s advanced electrical services including                                    load management, smart panels, EV charging, PG&E; coordination, and specialty audio systems. The site must
+integrate cleanly with GoHighLevel for lead capture.
+Platform & Stack
+
+Hosting: Cloudflare Pages
+
+Framework: Astro (preferred) or equivalent static framework
+
+Forms & CRM: GoHighLevel embeds
+                                                                            DNS, SSL, security: Cloudflare-managed
+Pages to Build
+
+Homepage
+
+Services index page
+
+Five individual service pages
+
+Contact / Request a Quote page
+Service Pages
+
+Load Management & Power Planning
+
+Smart Electrical Panels & Energy Monitoring
+
+Permits & PG&E; Coordination
+
+EV Charging & Load Sharing
+
+Audiophile Audio Systems & Networked Playback
+Design Direction
+Use provided mockups as visual direction. Design should be calm, technical, and professional. Mobile-first layout,
+clean typography, strong hierarchy, and clear calls to action.
+Lead Capture & Tracking
+Embed GoHighLevel forms on the Contact page and key CTAs. Leads should be tagged by service page source.
+Enable click-to-call on mobile using (408) 900-2672.
+SEO & Technical Requirements
+                                                                            Unique meta titles and descriptions per page                                 
+LocalBusiness schema markup                                                  
+Performance target: Lighthouse score 90+
+
+Accessible, semantic HTML structure
+Definition of Done                                                           
+Deployed on Cloudflare Pages
+
+All GoHighLevel forms functional                                             
+Mobile and desktop QA completed
+
+Final content and layout approved
+
+Mirkovic Electric
+Modern Electrical Solutions for Today’s High-Demand Properties
+Licensed Bay Area Electrical Contractor specializing in EV charging, load management, smart panels,
+utility coordination, and high-performance audio systems.
+Call or Text: (408) 900-2672
+Electrical Work Designed for Today’s High-Demand Properties
+Homes, commercial spaces, and mixed-use properties require more than basic electrical service. EV
+chargers, heat pumps, solar, smart panels, and networked systems demand careful planning, code
+compliance, and coordination with utilities.
+Core Services
+EV Charging & Load Management
+Tesla and universal EV chargers, dynamic load management, service capacity evaluation and
+optimization.
+Smart Electrical Panels & Energy Monitoring
+SPAN smart panels, circuit-level monitoring, EV, solar, and battery integration.
+Permits & PG&E; Coordination
+Permit applications, PG&E; service coordination, load calculations, and inspection support.
+Panel Upgrades & Electrical Infrastructure
+Main panels, sub-panels, service relocations, dedicated circuits, remodel and addition support.
+Audiophile Audio Systems
+Reference-grade speaker wiring, bit-perfect multi-room audio endpoints, wired and wireless network
+design, and custom system planning.                                          Why Work With Mirkovic Electric
+Licensed California C-10 Electrical Contractor (#627414). Design-driven approach, Bay Area permitting
+experience, and professional workmanship.
+Service Areas
+Serving San Jose, Palo Alto, Menlo Park, Cupertino, San Mateo, and the greater Bay Area.
+
+Mirkovic Electric
+Modern Electrical & Infrastructure Solutions                                 Licensed Bay Area Electrical Contractor specializing in EV charging, load management, smart panels,
+utility coordination, and high-performance audio systems.                    Electrical Work Designed for Today’s High-Demand Homes
+Homes today require more than basic electrical service. EV chargers, heat pumps, solar, smart panels,
+and networked systems demand careful planning, code compliance, and coordination with utilities.                                                          Core Services
+EV Charging & Load Management
+Tesla and universal EV chargers, dynamic load management, service capacity evaluation.
+Smart Electrical Panels & Energy Monitoring                                  SPAN smart panels, circuit-level monitoring, EV and solar integration.
+Permits & PG&E; Coordination
+Permit applications, PG&E; service coordination, load calculations, inspections.                                                                          Panel Upgrades & Electrical Infrastructure
+Main panels, sub-panels, service relocations, remodel support.
+Audiophile Audio Systems
+Reference-grade speaker wiring, bit-perfect multi-room audio, custom endpoints.
+Why Work With Mirkovic Electric
+Licensed C-10 Contractor #627414. Design-driven, code-compliant, professional workmanship.
+Service Areas
+San Jose, Palo Alto, Menlo Park, Cupertino, San Mateo, and the greater Bay Area.
+
+EV Charging & Load Sharing
+System-Level EV Charging Solutions for Residential and Commercial Properties
+Electric vehicle charging is one of the fastest-growing electrical loads in modern properties. When not properly
+planned, EV chargers can exceed available service capacity or trigger costly and unnecessary upgrades.
+Mirkovic Electric designs and installs EV charging systems that integrate safely with existing electrical infrastructure
+through load management, smart controls, and utility-aware planning.
+What This Service Includes
+
+Residential and commercial EV charger installation
+
+Tesla Wall Connector and universal EVSE installations
+                                                                            NEC-compliant load calculations for EV charging
+                                                                            Breaker sizing, conductor selection, and raceway installation
+
+Dynamic load management (Tesla Neurio and load-sharing systems)
+
+Multiple EV charger load sharing configurations
+
+Integration with smart panels and energy monitoring systems
+
+Planning for future EV capacity expansion
+Load Sharing & Capacity Optimization
+In properties with limited electrical capacity, load sharing and dynamic load management allow EV charging to
+operate safely without exceeding service limits. These strategies often eliminate the need for immediate service
+upgrades while maintaining reliable charging performance.
+Applications
+
+Single-family and multi-unit residential properties
+                                                                            Commercial and mixed-use properties
+
+Properties with limited service capacity
+                                                                            Garages requiring multiple EV chargers                                       
+EV-ready planning for future vehicle adoption
+Permitting & Utility Coordination                                            EV charging installations often require electrical permits and, in some cases, utility review. This service may include
+permit submittals, load documentation, and coordination with PG&E; and local inspectors as required.
+Who This Service Is For
+This service is intended for homeowners, property managers, and business owners who want safe, compliant EV
+charging solutions that are designed around existing electrical capacity and future needs.
+
+Audiophile Audio Systems & Networked Playback
+Reference-Grade Audio Infrastructure, System Design, and Integration
+High-performance audio systems require more than quality components. Signal integrity, electrical noise control,
+proper grounding, and reliable network infrastructure all play a critical role in system performance.
+Mirkovic Electric designs and installs reference-grade audio infrastructure for clients who value sound quality, system
+reliability, and long-term flexibility. This service focuses on infrastructure, system topology, and bit-perfect signal
+delivery rather than consumer-grade audio packages.
+What This Service Includes
+
+In-wall and in-ceiling audiophile speaker wiring
+
+Dedicated low-noise electrical circuits for audio systems
+
+Proper grounding and noise mitigation strategies
+
+Conduit planning for future system upgrades
+
+Bit-perfect digital audio distribution (Ethernet, USB, S/PDIF, AES)
+
+Multi-room audio endpoint planning and deployment
+
+Wired and wireless network design optimized for audio playback
+
+Centralized equipment locations and rack planning
+System Design & Custom Endpoints
+Audio systems are designed around the client’s equipment, listening goals, and space constraints. Custom endpoints
+and playback nodes may be specified or built as part of the system architecture, with attention to power supply quality,
+clocking, and network stability.
+Network Infrastructure for Audio
+Reliable network performance is critical for modern audio systems. Network infrastructure is designed to support
+low-latency, low-interference audio playback across multiple endpoints while maintaining overall network reliability.
+Applications
+
+Dedicated listening rooms
+                                                                            Whole-property and multi-room audio systems
+
+Residential and mixed-use properties
+
+Studios and private workspaces
+
+Projects requiring clean power and noise isolation                           Who This Service Is For                                                      This service is intended for audiophiles, music professionals, and clients seeking high-performance audio systems
+built on a solid electrical and network foundation. Equipment sales are not the focus; design, infrastructure, and
+integration are prioritized.                                                 
+Load Management & Power Planning
+Electrical Capacity Planning for Modern Properties
+Modern residential and commercial properties place increasing demands on electrical systems. EV chargers, heat
+pumps, induction cooking, solar, battery storage, and advanced audio or networked systems often exceed the
+capacity of existing electrical services if not properly planned.
+Mirkovic Electric provides load management and power planning services designed to safely integrate new electrical
+loads while minimizing unnecessary service upgrades and avoiding permitting or inspection issues.
+What This Service Includes
+
+NEC-compliant electrical load calculations
+
+Evaluation of existing service capacity (100A, 125A, 200A and above)
+
+Identification of system constraints and limiting factors
+
+EV charger load management (Tesla Neurio and load-sharing systems)
+
+Smart load shedding and prioritization strategies
+
+Coordination between EV charging, HVAC, and other major electrical loads
+
+Planning to support future electrical expansion                              
+Determination of when a panel or service upgrade is truly required
+
+Alternatives to full service upgrades when feasible
+
+Integration with smart panels and energy monitoring systems
+Applications
+
+EV charger installations in capacity-limited properties
+
+Solar- and battery-ready electrical planning
+
+Residential remodels and additions
+
+Multi-unit and mixed-use properties
+
+Commercial tenant improvements
+
+Pre-construction feasibility assessments
+Utility & Permitting Coordination                                            When required, load management and power planning services may include documentation and coordination to
+support permit submittals and utility requirements, including load documentation, service capacity letters, PG&E;
+coordination, and inspection support.
+Why This Matters
+Improper planning can lead to failed inspections, project delays, and unnecessary service upgrades. Our planning-first
+approach allows electrical installations to proceed efficiently, compliantly, and with long-term reliability in mind.
+Who This Service Is For
+This service is intended for property owners, business owners, architects, and contractors who need to add significant
+electrical loads, require permit-ready documentation, or want to avoid unnecessary upgrades while planning for future
+electrical needs.
+
+Permits & PG&E; Coordination
+Pre-Construction Planning, Utility Coordination, and Inspection Support      Electrical projects in the Bay Area frequently require coordination with local building departments and PG&E.; Service                                    upgrades, EV charging installations, smart panels, and load management solutions often involve multiple approval
+steps before construction can begin.
+Mirkovic Electric manages the permitting and utility coordination process to reduce delays, avoid rejections, and
+ensure electrical work proceeds in compliance with local and utility requirements.                                                                        What This Service Includes                                                   
+Electrical permit application preparation and submittal
+
+Review of project scope for code and utility compliance                      
+Load calculations and service documentation                                                                                                              Service capacity letters and utility-facing documentation
+
+PG&E; service upgrade applications and coordination
+
+Meter, service, and utility equipment planning
+
+Scheduling coordination with inspectors and utilities
+
+Response to plan check comments and correction notices
+When This Service Is Needed
+
+Electrical service upgrades or relocations
+                                                                            EV charger installations requiring utility review
+
+Smart panel or load management projects
+
+Solar, battery, or generator integration
+                                                                            Commercial tenant improvements
+
+Projects involving PG&E-owned; equipment
+Why Utility Coordination Matters                                             Utility coordination is often the most time-consuming and misunderstood part of an electrical project. Improper
+documentation or incomplete applications can result in significant delays, redesigns, or additional costs.
+By addressing permitting and utility requirements early in the project, potential issues are identified before
+construction begins, helping projects move forward more efficiently.
+Who This Service Is For
+This service is intended for property owners, business owners, architects, and contractors who want a clear path
+through permitting and utility requirements, and who prefer to avoid delays caused by incomplete or incorrect                                             submittals.
+
+Smart Electrical Panels & Energy Monitoring
+Advanced Control and Visibility for Modern Electrical Systems                Electrical panels are no longer passive distribution equipment. Modern smart panels provide real-time visibility into
+energy usage, enable intelligent load control, and support the integration of EV charging, solar, battery storage, and
+future electrical loads.
+Mirkovic Electric designs and installs smart electrical panel solutions that improve system awareness, increase
+flexibility, and support long-term power planning for residential and commercial properties.
+What This Service Includes
+
+Smart electrical panel installation and configuration (including SPAN panels)
+Circuit-level energy monitoring and usage analysis
+
+Load prioritization and intelligent circuit control
+
+Integration with EV chargers, solar, and battery systems
+
+Retrofit installations and new construction applications                     
+Coordination with load management strategies
+
+Support for future electrical expansion and system changes
+
+Clear labeling and system documentation                                      Applications
+
+EV charger installations requiring intelligent load control
+
+Properties preparing for solar or battery integration
+                                                                            Homes and businesses seeking energy usage transparency
+
+Projects requiring flexible power management
+
+Clients planning phased electrical upgrades
+Integration With Other Services
+Smart panels are often deployed as part of a broader electrical strategy. They integrate directly with load
+management planning, EV charging systems, and utility coordination to provide a cohesive, future-ready electrical
+infrastructure.
+Why Choose a Smart Panel
+Smart panels provide actionable insight into electrical usage while enabling control strategies that can reduce the                                       need for costly service upgrades. When properly designed and installed, they add flexibility, transparency, and
+long-term value to the electrical system.
+Who This Service Is For                                                      This service is ideal for property owners, business owners, and project teams who want greater control over electrical                                    usage, plan to add major electrical loads, or require an adaptable system that can evolve over time.
+
+Mirkovic Electric — Developer Brief (Tailored for Third Voice Stack)
+Context
+This project follows the same performance-focused, modern web architecture used on thethirdvoice.ai and
+sipandsing.thethirdvoice.ai. The goal is a fast, clean, low-maintenance site built on Cloudflare-native infrastructure.
+Target Stack                                                                 
+Framework: Next.js (App Router) or Astro with React islands
+
+Styling: Tailwind CSS
+
+Hosting: Cloudflare Pages
+
+Server-side logic (if needed): Cloudflare Workers
+Architecture Expectations
+
+Static-first rendering for all marketing pages
+                                                                            Minimal JavaScript footprint; performance-first decisions
+
+Reusable components for service pages
+
+Clean, predictable URL routing
+Content Integration                                                          All copy is finalized and provided as PDFs. No CMS is required for initial launch. Content updates can be handled via
+code changes or markdown files if preferred.
+Lead Capture                                                                 Embed GoHighLevel forms directly into pages or modal components. Preserve UTM parameters and tag leads by
+service page source.
+Design Translation
+Mockups are conceptual and define hierarchy, spacing, and tone. Pixel-perfect replication is not required; clarity and
+usability take priority.
+Performance & SEO                                                            
+Mobile Lighthouse score target: 90+
+                                                                            Semantic HTML and proper heading structure
+                                                                            LocalBusiness schema for Mirkovic Electric
+Definition of Done                                                           
+Site deployed to Cloudflare Pages                                            
+All service pages live and linked
+
+GoHighLevel forms tested end-to-end                                          
+Final review and approval completed
+
+Mirkovic Electric — Website Developer Brief
+Objective
+Build a modern, fast, low-maintenance website that reflects Mirkovic Electric’s advanced electrical services including
+load management, smart panels, EV charging, PG&E; coordination, and specialty audio systems. The site must
+integrate cleanly with GoHighLevel for lead capture.
+Platform & Stack                                                             
+Hosting: Cloudflare Pages
+
+Framework: Astro (preferred) or equivalent static framework
+
+Forms & CRM: GoHighLevel embeds
+
+DNS, SSL, security: Cloudflare-managed
+Pages to Build
+
+Homepage
+
+Services index page
+
+Five individual service pages
+
+Contact / Request a Quote page
+Service Pages
+
+Load Management & Power Planning
+
+Smart Electrical Panels & Energy Monitoring
+
+Permits & PG&E; Coordination
+
+EV Charging & Load Sharing
+                                                                            Audiophile Audio Systems & Networked Playback
+Design Direction
+Use provided mockups as visual direction. Design should be calm, technical, and professional. Mobile-first layout,                                        clean typography, strong hierarchy, and clear calls to action.               Lead Capture & Tracking
+Embed GoHighLevel forms on the Contact page and key CTAs. Leads should be tagged by service page source.
+Enable click-to-call on mobile using (408) 900-2672.
+SEO & Technical Requirements
+
+Unique meta titles and descriptions per page                                 
+LocalBusiness schema markup
+
+Performance target: Lighthouse score 90+                                     
+Accessible, semantic HTML structure
+Definition of Done
+
+Deployed on Cloudflare Pages
+
+All GoHighLevel forms functional
+
+Mobile and desktop QA completed
+
+Final content and layout approved
+
+Mirkovic Electric – Website Overhaul Scope
+This website update is intended to modernize the Mirkovic Electric online presence so it accurately
+reflects the scope, complexity, and quality of services provided. The goal is to position the company as
+a design-driven electrical contractor specializing in high-demand residential systems, advanced load
+management, and specialty infrastructure.
+Scope of Website Work
+
+Rewrite homepage content to clearly communicate core services, technical expertise, and value
+proposition.
+
+Reorganize service offerings to highlight load management, smart electrical panels, PG&E;
+permitting and coordination, and specialty systems.
+
+Add dedicated service sections/pages for advanced offerings, including load management
+solutions, smart panels, utility coordination, and audiophile audio systems.
+
+Update language and structure to attract higher-quality, technically informed clients while filtering
+out low-scope inquiries.
+
+Improve clarity, navigation, and calls-to-action to increase qualified inquiries and consultation
+requests.                                                                    
+Ensure consistent professional tone aligned with licensing, permitting, and utility-facing work
+common to Bay Area projects.                                                 This effort focuses on content structure and positioning rather than cosmetic design alone, ensuring the
+website functions as a business development and client-qualification tool.   
+Mirkovic Electric — Website Mockups & Page Descriptions
+Homepage
+The homepage establishes Mirkovic Electric as a modern, design-driven electrical contractor serving both residential                                      and commercial clients. It highlights advanced services such as load management, smart panels, EV charging,
+permitting and PG&E; coordination, and specialty systems. Clear calls to action direct visitors to request a quote or
+initiate contact, while reinforcing licensing, experience, and service area. Developer note: Primary landing page. Establish brand credibility, headline messaging, and service categories. CTAs should route
+to GoHighLevel forms or click-to-call. Navigation should lead clearly into Services.                                                                      
+Load Management & Power Planning
+This page explains how electrical capacity planning supports modern properties with increasing power demands. It
+positions Mirkovic Electric as a planning-first contractor capable of integrating EVs, HVAC, solar, and future loads
+safely and efficiently.
+Developer note: Service detail page. Reusable layout component. Emphasize planning, calculations, and integration with other
+services.
+
+Smart Electrical Panels & Energy Monitoring
+This page introduces smart electrical panels as a tool for visibility, control, and long-term flexibility. It supports projects
+involving EV charging, solar, batteries, and phased electrical upgrades.
+Developer note: Detail page. Highlight SPAN and monitoring features. Cross-link to load management and EV services.
+
+Permits & PG&E; Coordination
+This page focuses on permitting and utility coordination as a core service. It reassures clients that complex electrical
+projects will be handled correctly, minimizing delays and failed inspections.
+Developer note: Detail page. Important trust builder. Language should remain calm and authoritative.
+
+EV Charging & Load Sharing
+This page presents EV charging as a system-level installation rather than a commodity service. It emphasizes load
+sharing, capacity optimization, and future readiness for multiple vehicles.  Developer note: Detail page. Include service-specific GHL form or tags. Reinforce relationship to load planning.
+
+Audiophile Audio Systems & Networked Playback
+This page positions high-end audio work as specialty infrastructure focused on power quality, wiring, and networking.
+It targets clients who value performance and system integrity over consumer-grade installations.
+Developer note: Specialty service page. Keep language selective. Avoid mass-market audio cues.
+
+Load Management & Power Planning
+This service focuses on electrical capacity planning for modern residential and commercial properties. It addresses
+increasing power demands from EV chargers, HVAC systems, solar, battery storage, and other high-load equipment
+through NEC-compliant load calculations, load management strategies, and service optimization.
+                                                                             Smart Electrical Panels & Energy Monitoring
+Smart electrical panels provide real-time visibility and intelligent control of electrical systems. This service supports EV
+charging, solar, and battery integration while enabling future electrical expansion through monitoring, prioritization,
+and system-level planning.
+
+Permits & PG&E; Coordination
+This service manages electrical permitting and PG&E; coordination to reduce delays and avoid costly corrections. It
+includes permit preparation, load documentation, utility coordination, and inspection support for residential and
+commercial projects.
+
+EV Charging & Load Sharing
+EV charging systems are designed with load sharing and capacity optimization to integrate safely with existing
+electrical infrastructure. This service supports residential, multi-unit, and commercial installations with permit-ready
+documentation and future expansion planning.
+
+Audiophile Audio Systems & Networked Playback
+This specialty service delivers reference-grade audio infrastructure with clean power, dedicated circuits, and robust
+wired and wireless networking. The focus is on system design, signal integrity, and long-term performance rather than                                     consumer-grade equipment sales.
