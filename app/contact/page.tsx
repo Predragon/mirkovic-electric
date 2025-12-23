@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import ContactForm from '@/components/forms/ContactForm'
 
 export const metadata = {
   title: 'Contact & Request a Quote | Mirkovic Electric',
@@ -55,19 +55,19 @@ export default function Contact() {
                 <h3 className="font-semibold text-brand-600 mb-3">What to Expect</h3>
                 <ul className="space-y-2 text-brand-500 text-sm">
                   <li className="flex gap-2">
-                    <span>✓</span>
+                    <span className="text-green-600">✓</span>
                     <span>Initial consultation to understand your goals</span>
                   </li>
                   <li className="flex gap-2">
-                    <span>✓</span>
+                    <span className="text-green-600">✓</span>
                     <span>Feasibility assessment and planning recommendations</span>
                   </li>
                   <li className="flex gap-2">
-                    <span>✓</span>
+                    <span className="text-green-600">✓</span>
                     <span>Detailed estimate with timeline</span>
                   </li>
                   <li className="flex gap-2">
-                    <span>✓</span>
+                    <span className="text-green-600">✓</span>
                     <span>Full project coordination and support</span>
                   </li>
                 </ul>
@@ -81,99 +81,7 @@ export default function Contact() {
                 <p className="text-brand-500 mb-6">
                   Fill out the form below and we'll get back to you within 24 business hours.
                 </p>
-
-                <form className="space-y-6">
-                  <div>
-                    <label htmlFor="name" className="block text-sm font-semibold text-brand-600 mb-2">
-                      Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      className="w-full px-4 py-2 border border-brand-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-600"
-                      placeholder="Your full name"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="email" className="block text-sm font-semibold text-brand-600 mb-2">
-                      Email *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      className="w-full px-4 py-2 border border-brand-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-600"
-                      placeholder="your@email.com"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="phone" className="block text-sm font-semibold text-brand-600 mb-2">
-                      Phone *
-                    </label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      required
-                      className="w-full px-4 py-2 border border-brand-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-600"
-                      placeholder="(408) 000-0000"
-                    />
-                  </div>
-
-                  <div>
-                    <label htmlFor="service" className="block text-sm font-semibold text-brand-600 mb-2">
-                      Service of Interest
-                    </label>
-                    <select
-                      id="service"
-                      name="service"
-                      className="w-full px-4 py-2 border border-brand-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-600"
-                    >
-                      <option value="">Select a service</option>
-                      <option value="ev-charging">EV Charging & Load Sharing</option>
-                      <option value="load-management">Load Management & Power Planning</option>
-                      <option value="smart-panels">Smart Electrical Panels</option>
-                      <option value="permits-pge">Permits & PG&E Coordination</option>
-                      <option value="audio-systems">Audiophile Audio Systems</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-semibold text-brand-600 mb-2">
-                      Project Details
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={5}
-                      className="w-full px-4 py-2 border border-brand-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-600"
-                      placeholder="Tell us about your project..."
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full btn-primary text-center"
-                  >
-                    Send Request
-                  </button>
-
-                  <p className="text-xs text-brand-300 text-center">
-                    We'll respond within 24 business hours. For urgent inquiries, please call (408) 900-2672.
-                  </p>
-                </form>
-
-                <div className="mt-8 pt-8 border-t border-brand-100">
-                  <p className="text-brand-400 text-sm">
-                    <strong>Note:</strong> This is a placeholder form. For immediate assistance or to integrate GoHighLevel forms, contact support.
-                  </p>
-                </div>
+                <ContactForm />
               </div>
             </div>
           </div>
