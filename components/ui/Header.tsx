@@ -15,7 +15,7 @@ export default function Header() {
           {/* Logo - Centered on mobile, left on desktop */}
           <Link href="/" className="flex flex-col items-center md:items-start flex-shrink-0 mx-auto md:mx-0">
             <Image
-              src="/images/logo-full.png"
+              src="/images/logo-full.webp"
               alt="Mirkovic Electric - Licensed Bay Area Electrician"
               width={400}
               height={80}

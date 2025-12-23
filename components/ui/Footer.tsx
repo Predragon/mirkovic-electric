@@ -24,7 +24,7 @@ export default function Footer() {
           <div className="col-span-2 md:col-span-1">
             <div className="mb-4">
               <Image
-                src="/images/logo-full.png"
+                src="/images/logo-full.webp"
                 alt="Mirkovic Electric - Licensed Bay Area Electrician"
                 width={200}
                 height={45}

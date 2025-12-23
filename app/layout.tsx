@@ -1,7 +1,14 @@
 import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/ui/Header'
 import Footer from '@/components/ui/Footer'
+
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-inter',
+})
 
 const siteUrl = 'https://landing.mirkovicelectric.com'
 
@@ -67,8 +74,8 @@ const localBusinessSchema = {
   '@type': 'Electrician',
   '@id': `${siteUrl}/#organization`,
   name: 'Mirkovic Electric',
-  image: `${siteUrl}/images/logo-full.png`,
-  logo: `${siteUrl}/images/logo-full.png`,
+  image: `${siteUrl}/images/logo-full.webp`,
+  logo: `${siteUrl}/images/logo-full.webp`,
   description: 'Licensed Bay Area electrical contractor specializing in EV charging, load management, smart panels, PG&E coordination, and audiophile audio systems. Serving the Bay Area since 1991.',
   url: siteUrl,
   telephone: '(408) 900-2672',
@@ -128,7 +135,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="antialiased bg-white text-brand-600">
+      <body className={`${inter.variable} font-sans antialiased bg-white text-brand-600`}>
         <Header />
         <main className="min-h-screen">
           {children}

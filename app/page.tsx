@@ -13,7 +13,7 @@ export default function Home() {
     <div className="w-full">
       {/* Hero Section with Parallax */}
       <ParallaxHero
-        imageSrc="/images/hero/ev-charging-hero.jpg"
+        imageSrc="/images/hero/ev-charging-hero.webp"
         imageAlt="Modern Electrical Solutions"
       >
         <div className="container-max relative z-10 py-16">
@@ -83,7 +83,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-8">
             <ParallaxCard
               href="/services/ev-charging/"
-              imageSrc="/images/cards/ev-charging-full.jpg"
+              imageSrc="/images/cards/ev-charging-full.webp"
               imageAlt="EV Charging Solutions"
               title="EV Charging Solutions"
               description="Level 2 chargers, load sharing & smart scheduling"
@@ -91,7 +91,7 @@ export default function Home() {
 
             <ParallaxCard
               href="/services/load-management/"
-              imageSrc="/images/cards/load-management-full.jpg"
+              imageSrc="/images/cards/load-management-full.webp"
               imageAlt="Load Management"
               title="Load Management"
               description="Power planning & electrical capacity optimization"
@@ -99,7 +99,7 @@ export default function Home() {
 
             <ParallaxCard
               href="/services/smart-panels/"
-              imageSrc="/images/cards/smart-panels-full.jpg"
+              imageSrc="/images/cards/smart-panels-full.webp"
               imageAlt="Smart Electrical Panels"
               title="Smart Electrical Panels"
               description="Span, Lumin & modern panel upgrades"
@@ -110,7 +110,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <ParallaxCard
               href="/services/permits-pge/"
-              imageSrc="/images/cards/permits-pge-full.jpg"
+              imageSrc="/images/cards/permits-pge-full.webp"
               imageAlt="Permits & PG&E Coordination"
               title="Permits & PG&E Coordination"
               description="Full permit handling & utility upgrades"
@@ -118,7 +118,7 @@ export default function Home() {
 
             <ParallaxCard
               href="/services/audio-systems/"
-              imageSrc="/images/cards/audio-systems-full.jpg"
+              imageSrc="/images/cards/audio-systems-full.webp"
               imageAlt="Audiophile Audio Systems"
               title="Audiophile Audio Systems"
               description="Dedicated circuits & clean power solutions"
