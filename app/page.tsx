@@ -32,62 +32,6 @@ export default function Home() {
         />
       </section>
 
-      {/* Service Icons Bar */}
-      <section className="bg-gradient-to-b from-gray-100 to-gray-50 py-8 border-b border-gray-200">
-        <div className="container-max">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <Link href="/services/ev-charging/" className="flex flex-col items-center group">
-              <Image
-                src="/images/icons/ev-charging-icon.png"
-                alt="EV Charging Solutions"
-                width={100}
-                height={80}
-                className="mb-2 group-hover:scale-105 transition-transform"
-              />
-              <span className="font-semibold text-navy-700 text-center text-sm md:text-base group-hover:text-accent-500 transition-colors">
-                EV Charging Solutions
-              </span>
-            </Link>
-            <Link href="/services/smart-panels/" className="flex flex-col items-center group">
-              <Image
-                src="/images/icons/smart-panels-icon.png"
-                alt="Smart Electrical Panels"
-                width={100}
-                height={80}
-                className="mb-2 group-hover:scale-105 transition-transform"
-              />
-              <span className="font-semibold text-navy-700 text-center text-sm md:text-base group-hover:text-accent-500 transition-colors">
-                Smart Electrical Panels
-              </span>
-            </Link>
-            <Link href="/services/permits-pge/" className="flex flex-col items-center group">
-              <Image
-                src="/images/icons/permits-icon.png"
-                alt="Permits & PG&E Coordination"
-                width={100}
-                height={80}
-                className="mb-2 group-hover:scale-105 transition-transform"
-              />
-              <span className="font-semibold text-navy-700 text-center text-sm md:text-base group-hover:text-accent-500 transition-colors">
-                Permits & PG&E Coordination
-              </span>
-            </Link>
-            <Link href="/services/audio-systems/" className="flex flex-col items-center group">
-              <Image
-                src="/images/icons/audio-icon.png"
-                alt="Audiophile Systems"
-                width={100}
-                height={80}
-                className="mb-2 group-hover:scale-105 transition-transform"
-              />
-              <span className="font-semibold text-navy-700 text-center text-sm md:text-base group-hover:text-accent-500 transition-colors">
-                Audiophile Systems
-              </span>
-            </Link>
-          </div>
-        </div>
-      </section>
-
       {/* Our Services Section */}
       <section className="py-12 bg-gradient-to-b from-gray-50 to-white">
         <div className="container-max">
@@ -100,25 +44,8 @@ export default function Home() {
             <p className="text-gray-600 text-lg">Experienced & Reliable Electrical Contracting</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <Link href="/services/smart-panels/" className="group">
-              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow border border-gray-100">
-                <div className="relative h-48 overflow-hidden">
-                  <Image
-                    src="/images/cards/smart-panels-full.png"
-                    alt="Smart Electrical Panels"
-                    fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="p-4 text-center bg-white">
-                  <h3 className="font-bold text-navy-800 text-lg group-hover:text-accent-500 transition-colors">
-                    Smart Electrical Panels
-                  </h3>
-                </div>
-              </div>
-            </Link>
-
+          {/* Top row - 3 services */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-6">
             <Link href="/services/ev-charging/" className="group">
               <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow border border-gray-100">
                 <div className="relative h-48 overflow-hidden">
@@ -154,14 +81,62 @@ export default function Home() {
                 </div>
               </div>
             </Link>
+
+            <Link href="/services/smart-panels/" className="group">
+              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow border border-gray-100">
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src="/images/cards/smart-panels-full.png"
+                    alt="Smart Electrical Panels"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-4 text-center bg-white">
+                  <h3 className="font-bold text-navy-800 text-lg group-hover:text-accent-500 transition-colors">
+                    Smart Electrical Panels
+                  </h3>
+                </div>
+              </div>
+            </Link>
           </div>
 
-          <div className="text-center mt-10">
-            <Link
-              href="/services/"
-              className="inline-block px-8 py-3 bg-accent-500 hover:bg-accent-600 text-white rounded font-bold transition-colors"
-            >
-              View All Services
+          {/* Bottom row - 2 services centered */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <Link href="/services/permits-pge/" className="group">
+              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow border border-gray-100">
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src="/images/cards/permits-pge-full.png"
+                    alt="Permits & PG&E Coordination"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-4 text-center bg-white">
+                  <h3 className="font-bold text-navy-800 text-lg group-hover:text-accent-500 transition-colors">
+                    Permits & PG&E Coordination
+                  </h3>
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/services/audio-systems/" className="group">
+              <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow border border-gray-100">
+                <div className="relative h-48 overflow-hidden">
+                  <Image
+                    src="/images/cards/audio-systems-full.png"
+                    alt="Audiophile Audio Systems"
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="p-4 text-center bg-white">
+                  <h3 className="font-bold text-navy-800 text-lg group-hover:text-accent-500 transition-colors">
+                    Audiophile Audio Systems
+                  </h3>
+                </div>
+              </div>
             </Link>
           </div>
         </div>
