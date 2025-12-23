@@ -43,7 +43,7 @@ export default function ParallaxHero({ imageSrc, imageAlt, children }: ParallaxH
       </div>
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-navy-900/90 via-navy-800/80 to-navy-900/70" />
+      <div className="absolute inset-0 bg-gradient-to-r from-navy-900/90 via-navy-800/80 to-navy-900/70" aria-hidden="true" />
 
       {/* Content */}
       {children}

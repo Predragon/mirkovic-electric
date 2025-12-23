@@ -57,7 +57,7 @@ export default function ParallaxCard({ href, imageSrc, imageAlt, title, descript
               className="object-cover group-hover:scale-105 transition-transform duration-500"
             />
           </div>
-          <div className="absolute inset-0 bg-gradient-to-t from-navy-900/60 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy-900/60 to-transparent" aria-hidden="true" />
         </div>
         <div className="p-5 text-center">
           <h3 className="font-bold text-navy-800 text-xl group-hover:text-accent-500 transition-colors">
