@@ -58,7 +58,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="antialiased bg-white text-brand-500">
+      <body className="antialiased bg-white text-brand-600">
         <Header />
         <main className="min-h-screen">
           {children}
