@@ -7,18 +7,14 @@ export default function Footer() {
       <div className="container-max py-12 sm:py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
-            <div className="flex items-center gap-3 mb-4">
+            <div className="mb-4">
               <Image
-                src="/images/logo.png"
-                alt="Mirkovic Electric"
-                width={40}
-                height={40}
-                className="rounded"
+                src="/images/logo-full.png"
+                alt="Mirkovic Electric - Licensed Bay Area Electrician"
+                width={200}
+                height={45}
+                className="h-10 w-auto"
               />
-              <div>
-                <span className="font-bold text-white">Mirkovic</span>
-                <span className="font-light text-gray-400 ml-1">ELECTRIC</span>
-              </div>
             </div>
             <p className="text-gray-400 text-sm">
               Modern Electrical Solutions for Today's High-Demand Properties

@@ -105,15 +105,15 @@ export default function Home() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow border border-gray-100">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="/images/cards/panel-upgrades.jpg"
-                    alt="Panel Upgrades"
+                    src="/images/cards/smart-panels-full.png"
+                    alt="Smart Electrical Panels"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-4 text-center bg-white">
                   <h3 className="font-bold text-navy-800 text-lg group-hover:text-accent-500 transition-colors">
-                    Panel Upgrades
+                    Smart Electrical Panels
                   </h3>
                 </div>
               </div>
@@ -123,33 +123,33 @@ export default function Home() {
               <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow border border-gray-100">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="/images/cards/ev-installations.jpg"
-                    alt="EV Charger Installations"
+                    src="/images/cards/ev-charging-full.png"
+                    alt="EV Charging Solutions"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-4 text-center bg-white">
                   <h3 className="font-bold text-navy-800 text-lg group-hover:text-accent-500 transition-colors">
-                    EV Charger Installations
+                    EV Charging Solutions
                   </h3>
                 </div>
               </div>
             </Link>
 
-            <Link href="/services/" className="group">
+            <Link href="/services/load-management/" className="group">
               <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow border border-gray-100">
                 <div className="relative h-48 overflow-hidden">
                   <Image
-                    src="/images/cards/troubleshooting.jpg"
-                    alt="Troubleshooting & Repairs"
+                    src="/images/cards/load-management-full.png"
+                    alt="Load Management"
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
                 <div className="p-4 text-center bg-white">
                   <h3 className="font-bold text-navy-800 text-lg group-hover:text-accent-500 transition-colors">
-                    Troubleshooting & Repairs
+                    Load Management
                   </h3>
                 </div>
               </div>

@@ -9,29 +9,17 @@ export default function Header() {
 
   return (
     <header className="bg-gradient-to-b from-navy-800 to-navy-700 shadow-lg">
-      <nav className="container-max flex items-center justify-between py-4">
+      <nav className="container-max flex items-center justify-between py-3">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center">
           <Image
-            src="/images/logo.png"
-            alt="Mirkovic Electric"
-            width={45}
-            height={45}
-            className="rounded"
+            src="/images/logo-full.png"
+            alt="Mirkovic Electric - Licensed Bay Area Electrician"
+            width={280}
+            height={60}
+            className="h-12 md:h-14 w-auto"
+            priority
           />
-          <div className="flex flex-col">
-            <div className="flex items-baseline">
-              <span className="font-serif italic text-white text-xl md:text-2xl tracking-wide" style={{fontFamily: 'Georgia, serif'}}>
-                Mirkovic
-              </span>
-              <span className="font-bold text-white text-lg md:text-xl ml-2 tracking-wider">
-                ELECTRIC
-              </span>
-            </div>
-            <span className="text-gray-400 text-xs hidden md:block">
-              Licensed Bay Area Electrician Since 1991
-            </span>
-          </div>
         </Link>
 
         {/* Desktop Navigation */}
