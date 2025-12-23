@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://landing.mirkovicelectric.com/sitemap.xml

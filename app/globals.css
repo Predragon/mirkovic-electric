@@ -11,24 +11,30 @@
     @apply antialiased;
   }
 
+  /* Responsive headings */
   h1 {
-    @apply text-4xl font-bold tracking-tight;
+    @apply text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-navy-800;
   }
 
   h2 {
-    @apply text-3xl font-bold tracking-tight;
+    @apply text-2xl sm:text-3xl font-bold tracking-tight text-navy-800;
   }
 
   h3 {
-    @apply text-2xl font-semibold;
+    @apply text-xl sm:text-2xl font-semibold text-navy-700;
   }
 
   h4 {
-    @apply text-xl font-semibold;
+    @apply text-lg sm:text-xl font-semibold text-navy-700;
   }
 
   p {
     @apply leading-relaxed;
+  }
+
+  /* Improve tap targets for mobile */
+  a, button {
+    @apply touch-manipulation;
   }
 }
 
@@ -37,15 +43,23 @@
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
+  /* Primary button with accent color */
   .btn-primary {
-    @apply inline-block px-6 py-3 bg-brand-600 text-white rounded-lg hover:bg-brand-700 transition-colors font-medium;
+    @apply inline-block px-6 py-3 bg-accent-500 text-white rounded-lg hover:bg-accent-600 transition-colors font-semibold shadow-lg shadow-accent-500/20;
   }
 
+  /* Secondary button with navy color */
   .btn-secondary {
-    @apply inline-block px-6 py-3 border-2 border-brand-600 text-brand-600 rounded-lg hover:bg-brand-50 transition-colors font-medium;
+    @apply inline-block px-6 py-3 border-2 border-navy-600 text-navy-600 rounded-lg hover:bg-navy-50 transition-colors font-semibold;
   }
 
   .section-padding {
     @apply py-12 sm:py-16 lg:py-20;
+  }
+
+  /* Focus states for accessibility */
+  .btn-primary:focus-visible,
+  .btn-secondary:focus-visible {
+    @apply outline-none ring-2 ring-accent-500 ring-offset-2;
   }
 }

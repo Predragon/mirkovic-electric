@@ -13,9 +13,35 @@ export async function generateMetadata({ params }: { params: Promise<{ service: 
   const service = getService(resolvedParams.service)
   if (!service) return {}
 
+  const title = `${service.title} | Mirkovic Electric`
+  const description = service.description.slice(0, 155) + '...'
+
   return {
-    title: `${service.title} | Mirkovic Electric`,
-    description: service.description,
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: 'website',
+      url: `https://landing.mirkovicelectric.com/services/${service.slug}/`,
+      images: [
+        {
+          url: '/images/og-image.png',
+          width: 1200,
+          height: 630,
+          alt: `${service.title} - Mirkovic Electric`,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: ['/images/og-image.png'],
+    },
+    alternates: {
+      canonical: `https://landing.mirkovicelectric.com/services/${service.slug}/`,
+    },
   }
 }
 
@@ -30,14 +56,14 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-b from-brand-50 to-white">
+      <section className="section-padding bg-gradient-to-b from-gray-50 to-white">
         <div className="container-max">
-          <Link href="/services/" className="text-brand-600 hover:text-brand-700 mb-4 inline-block">
-            ← Back to Services
+          <Link href="/services/" className="text-accent-500 hover:text-accent-600 mb-4 inline-flex items-center gap-1 font-medium">
+            <span aria-hidden="true">←</span> Back to Services
           </Link>
           <h1 className="mb-4">{service.title}</h1>
-          <p className="text-xl text-brand-400 mb-8 max-w-3xl">{service.subtitle}</p>
-          <p className="text-lg text-brand-500 mb-8 max-w-3xl">{service.description}</p>
+          <p className="text-lg sm:text-xl text-accent-500 font-medium mb-6 max-w-3xl">{service.subtitle}</p>
+          <p className="text-base sm:text-lg text-gray-600 mb-8 max-w-3xl">{service.description}</p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/contact/" className="btn-primary text-center">
               Request a Quote
@@ -53,16 +79,16 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
       <section className="section-padding">
         <div className="container-max max-w-3xl">
           {service.sections.map((section, idx) => (
-            <div key={idx} className="mb-12">
-              <h2 className="mb-6">{section.heading}</h2>
+            <div key={idx} className="mb-10 sm:mb-12">
+              <h2 className="mb-4 sm:mb-6">{section.heading}</h2>
               {typeof section.content === 'string' ? (
-                <p className="text-brand-500 leading-relaxed mb-4">{section.content}</p>
+                <p className="text-gray-600 leading-relaxed mb-4">{section.content}</p>
               ) : (
                 <ul className="space-y-3">
                   {section.content.map((item, itemIdx) => (
                     <li key={itemIdx} className="flex gap-3">
-                      <span className="text-brand-600 font-bold mt-1">•</span>
-                      <span className="text-brand-500">{item}</span>
+                      <span className="text-accent-500 font-bold mt-1" aria-hidden="true">•</span>
+                      <span className="text-gray-600">{item}</span>
                     </li>
                   ))}
                 </ul>
@@ -71,13 +97,13 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
           ))}
 
           {service.applications && (
-            <div className="mb-12">
-              <h2 className="mb-6">Applications</h2>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="mb-10 sm:mb-12">
+              <h2 className="mb-4 sm:mb-6">Applications</h2>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4">
                 {service.applications.map((app, idx) => (
                   <li key={idx} className="flex gap-3">
-                    <span className="text-brand-600 font-bold">•</span>
-                    <span className="text-brand-500">{app}</span>
+                    <span className="text-accent-500 font-bold" aria-hidden="true">•</span>
+                    <span className="text-gray-600">{app}</span>
                   </li>
                 ))}
               </ul>
@@ -85,49 +111,49 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
           )}
 
           {service.whoItFor && (
-            <div className="mb-12 p-6 bg-brand-50 rounded-lg">
-              <h3 className="font-semibold text-brand-600 mb-3">Who This Service Is For</h3>
-              <p className="text-brand-500">{service.whoItFor}</p>
+            <div className="mb-10 sm:mb-12 p-5 sm:p-6 bg-accent-50 rounded-xl border border-accent-100">
+              <h3 className="font-semibold text-navy-700 mb-3">Who This Service Is For</h3>
+              <p className="text-gray-600">{service.whoItFor}</p>
             </div>
           )}
         </div>
       </section>
 
       {/* Related Services */}
-      <section className="section-padding bg-brand-50">
+      <section className="section-padding bg-gray-50">
         <div className="container-max">
-          <h2 className="text-center mb-12">Related Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+          <h2 className="text-center mb-8 sm:mb-12">Related Services</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-2xl mx-auto">
             <Link
               href="/services/"
-              className="p-6 bg-white rounded-lg border border-brand-100 hover:border-brand-300 transition-all"
+              className="p-5 sm:p-6 bg-white rounded-xl border border-gray-100 hover:border-accent-300 hover:shadow-lg transition-all group"
             >
-              <h3 className="font-semibold text-brand-600 mb-2">All Services</h3>
-              <p className="text-brand-400 text-sm">Explore our complete range of electrical solutions.</p>
+              <h3 className="font-semibold text-navy-700 mb-2 group-hover:text-accent-500 transition-colors">All Services</h3>
+              <p className="text-gray-500 text-sm">Explore our complete range of electrical solutions.</p>
             </Link>
             <Link
               href="/services/load-management/"
-              className="p-6 bg-white rounded-lg border border-brand-100 hover:border-brand-300 transition-all"
+              className="p-5 sm:p-6 bg-white rounded-xl border border-gray-100 hover:border-accent-300 hover:shadow-lg transition-all group"
             >
-              <h3 className="font-semibold text-brand-600 mb-2">Load Management</h3>
-              <p className="text-brand-400 text-sm">Capacity planning for modern electrical systems.</p>
+              <h3 className="font-semibold text-navy-700 mb-2 group-hover:text-accent-500 transition-colors">Load Management</h3>
+              <p className="text-gray-500 text-sm">Capacity planning for modern electrical systems.</p>
             </Link>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="section-padding">
+      <section className="section-padding bg-navy-800 text-white">
         <div className="container-max text-center">
-          <h2 className="mb-8">Ready to get started?</h2>
-          <p className="text-lg text-brand-400 mb-8 max-w-2xl mx-auto">
+          <h2 className="mb-6 text-white">Ready to get started?</h2>
+          <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Contact us today to discuss how {service.title.toLowerCase()} can benefit your project.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact/" className="btn-primary text-center">
               Request a Quote
             </Link>
-            <a href="tel:(408)900-2672" className="btn-secondary text-center">
+            <a href="tel:(408)900-2672" className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white border-2 border-white/30 rounded-lg font-semibold transition-colors text-center">
               (408) 900-2672
             </a>
           </div>
