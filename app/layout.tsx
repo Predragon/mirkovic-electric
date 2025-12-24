@@ -10,7 +10,7 @@ const inter = Inter({
   variable: '--font-inter',
 })
 
-const siteUrl = 'https://landing.mirkovicelectric.com'
+const siteUrl = 'https://mirkovicelectric.com'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

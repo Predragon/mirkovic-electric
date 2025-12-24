@@ -6,10 +6,10 @@ export const metadata = {
   openGraph: {
     title: 'Electrical Services | Mirkovic Electric',
     description: 'Professional electrical services in the Bay Area: EV charging, load management, smart panels, permits, and audio systems.',
-    url: 'https://landing.mirkovicelectric.com/services/',
+    url: 'https://mirkovicelectric.com/services/',
   },
   alternates: {
-    canonical: 'https://landing.mirkovicelectric.com/services/',
+    canonical: 'https://mirkovicelectric.com/services/',
   },
 }
 

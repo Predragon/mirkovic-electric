@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ service: 
       title,
       description,
       type: 'website',
-      url: `https://landing.mirkovicelectric.com/services/${service.slug}/`,
+      url: `https://mirkovicelectric.com/services/${service.slug}/`,
       images: [
         {
           url: '/images/og-image.png',
@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: { params: Promise<{ service: 
       images: ['/images/og-image.png'],
     },
     alternates: {
-      canonical: `https://landing.mirkovicelectric.com/services/${service.slug}/`,
+      canonical: `https://mirkovicelectric.com/services/${service.slug}/`,
     },
   }
 }

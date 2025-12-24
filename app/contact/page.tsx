@@ -6,10 +6,10 @@ export const metadata = {
   openGraph: {
     title: 'Contact & Request a Quote | Mirkovic Electric',
     description: 'Get in touch with Mirkovic Electric. Call (408) 900-2672 for a free quote on EV charging, smart panels, and electrical services.',
-    url: 'https://landing.mirkovicelectric.com/contact/',
+    url: 'https://mirkovicelectric.com/contact/',
   },
   alternates: {
-    canonical: 'https://landing.mirkovicelectric.com/contact/',
+    canonical: 'https://mirkovicelectric.com/contact/',
   },
 }
 
