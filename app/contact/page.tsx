@@ -1,4 +1,4 @@
-import ContactForm from '@/components/forms/ContactForm'
+import GoHighLevelForm from '@/components/forms/GoHighLevelForm'
 
 export const metadata = {
   title: 'Contact & Request a Quote',
@@ -101,7 +101,7 @@ export default function Contact() {
                 <p className="text-gray-600 mb-6">
                   Fill out the form below and we'll get back to you within 24 business hours.
                 </p>
-                <ContactForm />
+                <GoHighLevelForm />
               </div>
             </div>
           </div>
