@@ -22,8 +22,3 @@ R2_PUBLIC_URL = "https://media.mirkovicelectric.com"
 
 # Secrets (set via wrangler secret put ADMIN_PASSWORD)
 # ADMIN_PASSWORD - Set this using: wrangler secret put ADMIN_PASSWORD
-
-# Pages configuration (for local development)
-[pages]
-build_command = "npm run build"
-build_output_directory = ".next"
