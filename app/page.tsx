@@ -2,7 +2,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import ParallaxCard from '@/components/ui/ParallaxCard'
 import ParallaxHero from '@/components/ui/ParallaxHero'
-import HolidaySnow from '@/components/ui/HolidaySnow'
 
 export const metadata = {
   title: 'Mirkovic Electric | Licensed Bay Area Electrical Contractor',
@@ -12,18 +11,6 @@ export const metadata = {
 export default function Home() {
   return (
     <div className="w-full">
-      {/* Holiday Effects - Remove after holidays */}
-      <HolidaySnow />
-
-      {/* Holiday Banner - Remove after holidays */}
-      <div className="bg-gradient-to-r from-red-700 via-red-600 to-green-700 text-white py-3 text-center">
-        <p className="text-sm md:text-base font-medium">
-          <span className="mr-2">🎄</span>
-          Happy Holidays from Mirkovic Electric! Wishing you a safe & joyful season.
-          <span className="ml-2">⚡</span>
-        </p>
-      </div>
-
       {/* Hero Section with Parallax */}
       <ParallaxHero
         imageSrc="/images/hero/ev-charging-hero.webp"
