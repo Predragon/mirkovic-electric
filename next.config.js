@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Removed 'output: export' to enable server-side rendering for dynamic content
+  output: 'export',
   trailingSlash: true,
   images: {
     remotePatterns: [
