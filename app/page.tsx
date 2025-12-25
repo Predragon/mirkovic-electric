@@ -92,8 +92,35 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Top row - 3 services with parallax */}
+          {/* Top row - 3 core services */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-8">
+            <ParallaxCard
+              href="/services/general-electrical/"
+              imageSrc="/images/cards/general-electrical-full.webp"
+              imageAlt="General Electrical Services"
+              title="General Electrical Services"
+              description="Troubleshooting, repairs, dedicated circuits & maintenance"
+            />
+
+            <ParallaxCard
+              href="/services/power-planning/"
+              imageSrc="/images/cards/load-management-full.webp"
+              imageAlt="Power Planning & Load Management"
+              title="Power Planning & Smart Panels"
+              description="Load management, smart panels & capacity optimization"
+            />
+
+            <ParallaxCard
+              href="/services/service-upgrades/"
+              imageSrc="/images/cards/smart-panels-full.webp"
+              imageAlt="Electrical Service Upgrades"
+              title="Electrical Service Upgrades"
+              description="Panel replacements & service capacity upgrades"
+            />
+          </div>
+
+          {/* Bottom row - 3 specialized services */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <ParallaxCard
               href="/services/ev-charging/"
               imageSrc="/images/cards/ev-charging-full.webp"
@@ -102,25 +129,6 @@ export default function Home() {
               description="Level 2 chargers, load sharing & smart scheduling"
             />
 
-            <ParallaxCard
-              href="/services/load-management/"
-              imageSrc="/images/cards/load-management-full.webp"
-              imageAlt="Load Management"
-              title="Load Management"
-              description="Power planning & electrical capacity optimization"
-            />
-
-            <ParallaxCard
-              href="/services/smart-panels/"
-              imageSrc="/images/cards/smart-panels-full.webp"
-              imageAlt="Smart Electrical Panels"
-              title="Smart Electrical Panels"
-              description="Span, Lumin & modern panel upgrades"
-            />
-          </div>
-
-          {/* Bottom row - 2 services centered with parallax */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <ParallaxCard
               href="/services/permits-pge/"
               imageSrc="/images/cards/permits-pge-full.webp"
