@@ -1,9 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
+  // Removed 'output: export' to enable server-side rendering for dynamic content
   trailingSlash: true,
-  distDir: 'out',
   images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'media.mirkovicelectric.com',
+      },
+    ],
     unoptimized: true,
   },
   eslint: {
