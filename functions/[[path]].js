@@ -170,7 +170,7 @@ export async function onRequest(context) {
       }
 
       // Text content replacements for service pages
-      const serviceTextDefaults: Record<string, Record<string, string>> = {
+      const serviceTextDefaults = {
         'ev-charging': {
           'page-subtitle': 'Professional Installation',
           'page-title': 'EV Charging Installation',
