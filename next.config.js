@@ -2,8 +2,13 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
-  distDir: 'out',
   images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'media.mirkovicelectric.com',
+      },
+    ],
     unoptimized: true,
   },
   eslint: {

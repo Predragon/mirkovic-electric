@@ -1,0 +1,9 @@
+# Cloudflare Pages ignore file
+# Exclude cache directories from deployment
+
+.next/cache
+node_modules
+.git
+*.log
+.env*
+!.env.example

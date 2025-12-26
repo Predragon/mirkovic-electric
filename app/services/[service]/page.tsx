@@ -123,7 +123,7 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
       <section className="section-padding bg-gray-50">
         <div className="container-max">
           <h2 className="text-center mb-8 sm:mb-12">Related Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-2xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto">
             <Link
               href="/services/"
               className="p-5 sm:p-6 bg-white rounded-xl border border-gray-100 hover:border-accent-300 hover:shadow-lg transition-all group"
@@ -132,11 +132,18 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
               <p className="text-gray-500 text-sm">Explore our complete range of electrical solutions.</p>
             </Link>
             <Link
-              href="/services/load-management/"
+              href="/services/power-planning/"
               className="p-5 sm:p-6 bg-white rounded-xl border border-gray-100 hover:border-accent-300 hover:shadow-lg transition-all group"
             >
-              <h3 className="font-semibold text-navy-700 mb-2 group-hover:text-accent-500 transition-colors">Load Management</h3>
-              <p className="text-gray-500 text-sm">Capacity planning for modern electrical systems.</p>
+              <h3 className="font-semibold text-navy-700 mb-2 group-hover:text-accent-500 transition-colors">Power Planning</h3>
+              <p className="text-gray-500 text-sm">Advanced planning and smart panel solutions.</p>
+            </Link>
+            <Link
+              href="/services/service-upgrades/"
+              className="p-5 sm:p-6 bg-white rounded-xl border border-gray-100 hover:border-accent-300 hover:shadow-lg transition-all group"
+            >
+              <h3 className="font-semibold text-navy-700 mb-2 group-hover:text-accent-500 transition-colors">Service Upgrades</h3>
+              <p className="text-gray-500 text-sm">Panel and service capacity upgrades.</p>
             </Link>
           </div>
         </div>

@@ -2,7 +2,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import ParallaxCard from '@/components/ui/ParallaxCard'
 import ParallaxHero from '@/components/ui/ParallaxHero'
-import HolidaySnow from '@/components/ui/HolidaySnow'
 
 export const metadata = {
   title: 'Mirkovic Electric | Licensed Bay Area Electrical Contractor',
@@ -12,22 +11,10 @@ export const metadata = {
 export default function Home() {
   return (
     <div className="w-full">
-      {/* Holiday Effects - Remove after holidays */}
-      <HolidaySnow />
-
-      {/* Holiday Banner - Remove after holidays */}
-      <div className="bg-gradient-to-r from-red-700 via-red-600 to-green-700 text-white py-3 text-center">
-        <p className="text-sm md:text-base font-medium">
-          <span className="mr-2">🎄</span>
-          Happy Holidays from Mirkovic Electric! Wishing you a safe & joyful season.
-          <span className="ml-2">⚡</span>
-        </p>
-      </div>
-
       {/* Hero Section with Parallax */}
       <ParallaxHero
         imageSrc="/images/hero/ev-charging-hero.webp"
-        imageAlt="Modern Electrical Solutions"
+        imageAlt="Professional EV Charger Installation Bay Area - Licensed Electrician San Jose"
       >
         <div className="container-max relative z-10 py-16">
           <div className="max-w-2xl">
@@ -92,39 +79,47 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Top row - 3 services with parallax */}
+          {/* Top row - 3 core services */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-8">
+            <ParallaxCard
+              href="/services/general-electrical/"
+              imageSrc="/images/cards/general-electrical-full.webp"
+              imageAlt="Licensed Electrician Bay Area - Residential & Commercial Electrical Repairs San Jose"
+              title="General Electrical Services"
+              description="Troubleshooting, repairs, dedicated circuits & maintenance"
+            />
+
+            <ParallaxCard
+              href="/services/power-planning/"
+              imageSrc="/images/cards/load-management-full.webp"
+              imageAlt="Smart Load Management Systems Bay Area - Electrical Panel Optimization Palo Alto"
+              title="Power Planning & Smart Panels"
+              description="Load management, smart panels & capacity optimization"
+            />
+
+            <ParallaxCard
+              href="/services/service-upgrades/"
+              imageSrc="/images/cards/smart-panels-full.webp"
+              imageAlt="Electrical Panel Upgrade Service Bay Area - 200 Amp Panel Installation San Jose"
+              title="Electrical Service Upgrades"
+              description="Panel replacements & service capacity upgrades"
+            />
+          </div>
+
+          {/* Bottom row - 3 specialized services */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <ParallaxCard
               href="/services/ev-charging/"
               imageSrc="/images/cards/ev-charging-full.webp"
-              imageAlt="EV Charging Solutions"
+              imageAlt="Tesla EV Charger Installation Bay Area - Level 2 Electric Vehicle Charging San Jose Palo Alto"
               title="EV Charging Solutions"
               description="Level 2 chargers, load sharing & smart scheduling"
             />
 
             <ParallaxCard
-              href="/services/load-management/"
-              imageSrc="/images/cards/load-management-full.webp"
-              imageAlt="Load Management"
-              title="Load Management"
-              description="Power planning & electrical capacity optimization"
-            />
-
-            <ParallaxCard
-              href="/services/smart-panels/"
-              imageSrc="/images/cards/smart-panels-full.webp"
-              imageAlt="Smart Electrical Panels"
-              title="Smart Electrical Panels"
-              description="Span, Lumin & modern panel upgrades"
-            />
-          </div>
-
-          {/* Bottom row - 2 services centered with parallax */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <ParallaxCard
               href="/services/permits-pge/"
               imageSrc="/images/cards/permits-pge-full.webp"
-              imageAlt="Permits & PG&E Coordination"
+              imageAlt="PG&E Electrical Permits Bay Area - Utility Coordination & Code Compliance San Jose"
               title="Permits & PG&E Coordination"
               description="Full permit handling & utility upgrades"
             />
@@ -132,7 +127,7 @@ export default function Home() {
             <ParallaxCard
               href="/services/audio-systems/"
               imageSrc="/images/cards/audio-systems-full.webp"
-              imageAlt="Audiophile Audio Systems"
+              imageAlt="Audiophile Electrical Systems Bay Area - Dedicated Audio Circuits Clean Power San Jose"
               title="Audiophile Audio Systems"
               description="Dedicated circuits & clean power solutions"
             />

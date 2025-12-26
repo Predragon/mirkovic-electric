@@ -4,14 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && rm -rf .next/cache",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "next": "^15.0.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "browser-image-compression": "^2.0.2"
   },
   "devDependencies": {
     "@types/node": "^20.0.0",

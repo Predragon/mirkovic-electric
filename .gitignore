@@ -7,3 +7,9 @@ out/
 .env.local
 .env.*.local
 *.log
+cookies.txt
+logo-download.png
+logo-temp.png
+logo.png
+mirkovic-electric-website-rating.pdf
+generate-rating-pdf.js

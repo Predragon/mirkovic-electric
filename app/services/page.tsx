@@ -1,8 +1,8 @@
 import Link from 'next/link'
 
 export const metadata = {
-  title: 'Electrical Services',
-  description: 'Professional electrical services in the Bay Area: EV charging installation, load management, smart panels (SPAN), permits & PG&E coordination, and audiophile audio systems.',
+  title: 'Electrical Services | Mirkovic Electric',
+  description: 'Systems-level electrical contractor in the Bay Area: general electrical & infrastructure, power planning, service upgrades, EV charging, permits & PG&E coordination, and audiophile systems.',
   openGraph: {
     title: 'Electrical Services | Mirkovic Electric',
     description: 'Professional electrical services in the Bay Area: EV charging, load management, smart panels, permits, and audio systems.',
@@ -16,28 +16,33 @@ export const metadata = {
 export default function Services() {
   const services = [
     {
+      title: 'General Electrical & Infrastructure',
+      description: 'Professional troubleshooting, repairs, dedicated circuits, and infrastructure improvements—executed cleanly, safely, and to code.',
+      href: '/services/general-electrical/',
+    },
+    {
+      title: 'Power Planning, Load Management & Smart Panels',
+      description: 'Advanced planning and smart panel solutions for EVs, remodels, solar, and modern high-demand electrical systems.',
+      href: '/services/power-planning/',
+    },
+    {
+      title: 'Electrical Service Upgrades',
+      description: 'Service and panel upgrades designed to safely support increased electrical demand and future electrification.',
+      href: '/services/service-upgrades/',
+    },
+    {
       title: 'EV Charging & Load Sharing',
-      description: 'System-level EV charging solutions for residential and commercial properties.',
+      description: 'Residential and commercial EV charging solutions with proper load calculations, smart load sharing, and permit-ready installations.',
       href: '/services/ev-charging/',
     },
     {
-      title: 'Load Management & Power Planning',
-      description: 'Electrical capacity planning for modern properties with increasing power demands.',
-      href: '/services/load-management/',
-    },
-    {
-      title: 'Smart Electrical Panels & Energy Monitoring',
-      description: 'Advanced control and visibility for modern electrical systems.',
-      href: '/services/smart-panels/',
-    },
-    {
       title: 'Permits & PG&E Coordination',
-      description: 'Pre-construction planning, utility coordination, and inspection support.',
+      description: 'End-to-end permitting and PG&E coordination for service upgrades, EV charging, and capacity-related electrical work.',
       href: '/services/permits-pge/',
     },
     {
       title: 'Audiophile Audio Systems & Networked Playback',
-      description: 'Reference-grade audio infrastructure, system design, and integration.',
+      description: 'Electrical and infrastructure support for high-performance, low-noise audio systems and dedicated listening spaces.',
       href: '/services/audio-systems/',
     },
   ]
@@ -49,8 +54,11 @@ export default function Services() {
         <div className="container-max text-center">
           <p className="text-accent-500 font-semibold mb-2 tracking-wide uppercase text-sm">What We Do</p>
           <h1 className="mb-6">Our Services</h1>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
-            Mirkovic Electric provides design-driven electrical solutions for modern residential and commercial properties.
+          <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-4">
+            Modern electrical solutions for residential and commercial properties—planned, permitted, and built to support today's higher electrical demands.
+          </p>
+          <p className="text-base text-gray-500 max-w-2xl mx-auto">
+            Our work is grounded in code compliance, clean execution, and long-term reliability. Whether you need core electrical infrastructure, advanced power planning, or specialty systems, we approach every project with the same planning-first mindset.
           </p>
         </div>
       </section>
@@ -81,16 +89,16 @@ export default function Services() {
       {/* CTA Section */}
       <section className="section-padding bg-navy-800 text-white">
         <div className="container-max text-center">
-          <h2 className="mb-6 text-white">Ready to get started?</h2>
+          <h2 className="mb-6 text-white">Not Sure Where to Start?</h2>
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
-            Contact us today to discuss your project and schedule a consultation.
+            If you're planning an upgrade or adding new electrical loads, we can help you determine the safest and most efficient path forward. Most projects benefit from starting with power planning to avoid unnecessary upgrades and ensure long-term reliability.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact/" className="btn-primary text-center">
               Request a Quote
             </Link>
             <a href="tel:(408)900-2672" className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white border-2 border-white/30 rounded-lg font-semibold transition-colors text-center">
-              Call: (408) 900-2672
+              Call/Text: (408) 900-2672
             </a>
           </div>
         </div>

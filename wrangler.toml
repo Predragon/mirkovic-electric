@@ -1,0 +1,24 @@
+name = "mirkovic-electric"
+compatibility_date = "2023-12-01"
+
+# Production environment configuration
+[env.production]
+
+# D1 Database binding
+# After creating the D1 database, update the database_id below
+[[env.production.d1_databases]]
+binding = "DB"
+database_name = "mirkovic-electric-content"
+database_id = "807d0a38-4123-444a-bfa9-6a4faac51d4d"
+
+# R2 Bucket binding
+[[env.production.r2_buckets]]
+binding = "R2_BUCKET"
+bucket_name = "mirkovicelectric"
+
+# Environment variables
+[env.production.vars]
+R2_PUBLIC_URL = "https://media.mirkovicelectric.com"
+
+# Secrets (set via wrangler secret put ADMIN_PASSWORD)
+# ADMIN_PASSWORD - Set this using: wrangler secret put ADMIN_PASSWORD

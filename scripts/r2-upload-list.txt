@@ -1,0 +1,35 @@
+R2 Upload Checklist for mirkovicelectric bucket
+=================================================
+
+Create these folders in R2:
+□ images/
+  □ images/cards/
+  □ images/hero/
+  □ images/general/
+
+Upload these files:
+
+TO: images/cards/
+  □ audio-systems-full.webp
+  □ ev-charging-full.webp
+  □ ev-installations.webp
+  □ general-electrical-full.webp
+  □ load-management-full.webp
+  □ panel-upgrades.webp
+  □ permits-pge-full.webp
+  □ smart-panels-full.webp
+  □ troubleshooting.webp
+
+TO: images/hero/
+  □ ev-charging-hero-old-backup.webp
+  □ ev-charging-hero.webp
+  □ hero-bg.webp
+  □ modern-home.webp
+  □ smart-home.webp
+
+TO: images/general/
+  □ logo-full.webp
+  □ logo.webp
+
+Local file locations:
+/data/data/com.termux/files/home/mirkovic_electric/public/images/

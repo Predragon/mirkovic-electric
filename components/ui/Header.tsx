@@ -67,13 +67,7 @@ export default function Header() {
           </div>
 
           {/* Mobile Menu Button - Absolute positioned */}
-          <div className="md:hidden absolute right-4 top-4 flex items-center gap-2">
-            <a
-              href="tel:(408)900-2672"
-              className="px-3 py-1.5 bg-accent-500 text-white rounded font-bold text-sm"
-            >
-              Call
-            </a>
+          <div className="md:hidden absolute left-4 top-4 flex items-center gap-2">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="p-2 text-white"
@@ -88,6 +82,12 @@ export default function Header() {
                 )}
               </svg>
             </button>
+            <a
+              href="tel:(408)900-2672"
+              className="px-3 py-1.5 bg-accent-500 text-white rounded font-bold text-sm"
+            >
+              Call
+            </a>
           </div>
         </div>
       </div>

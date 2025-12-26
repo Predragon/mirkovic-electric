@@ -13,6 +13,123 @@ export interface Service {
 }
 
 export const services: Record<string, Service> = {
+  'general-electrical': {
+    slug: 'general-electrical',
+    title: 'General Electrical & Infrastructure',
+    subtitle: 'Professional Electrical Work for Residential and Commercial Properties',
+    description: 'Modern electrical work for residential and commercial properties-done cleanly, safely, and built to support future needs. Mirkovic Electric provides professional electrical service, upgrades, and corrective work with the same planning-first mindset used on higher-complexity projects. We prioritize safe execution, code compliance, clear communication, and workmanship that holds up over time.',
+    sections: [
+      {
+        heading: 'What This Service Includes',
+        content: [
+          'Electrical troubleshooting and repairs',
+          'Overloaded circuits, nuisance tripping, and power-quality issues',
+          'Code corrections identified during inspections or remodels',
+          'Safety upgrades and corrective work for aging or modified systems',
+          'Dedicated circuits for appliances and equipment',
+          'Power for heat pumps, induction ranges, laundry, workshops, and specialty loads',
+          'Outlet additions and circuit extensions where appropriate',
+          'Commercial equipment installs and tenant-improvement support',
+          'Panel maintenance (breaker replacement, labeling, cleanup)',
+          'Coordination with other trades during remodels or build-outs',
+        ],
+      },
+      {
+        heading: 'Why This Matters',
+        content: 'Electrical systems are often pushed beyond their original design as properties evolve. Clean, code-compliant infrastructure work prevents repeat issues, improves safety, and creates a foundation for future electrification. Whether you are resolving an issue, adding new equipment, improving power distribution, or preparing a property for future electrical demand, we approach the work as infrastructure designed to be reliable, serviceable, and ready for what is next.',
+      },
+    ],
+    applications: [
+      'Service calls and troubleshooting',
+      'Remodels and additions',
+      'Commercial tenant improvements',
+      'Equipment upgrades requiring new circuits',
+      'Pre-sale or inspection-driven corrections',
+      '"Make it right" cleanup of prior work',
+    ],
+    whoItFor: 'This service is for property owners and businesses needing reliable electrical work executed with professional standards, code compliance, and attention to future needs-whether addressing immediate issues or building infrastructure for long-term use.',
+  },
+  'power-planning': {
+    slug: 'power-planning',
+    title: 'Power Planning, Load Management & Smart Panels',
+    subtitle: 'Advanced Electrical Planning for Modern High-Demand Systems',
+    description: 'Modern properties face increasing electrical demands from EVs, heat pumps, induction cooking, solar, battery storage, and advanced systems. Without proper planning, these loads can exceed service capacity, trigger unnecessary upgrades, or create permitting issues. Mirkovic Electric provides integrated power planning, load management, and smart panel solutions designed to safely support new electrical loads while minimizing costly service upgrades and avoiding compliance problems.',
+    sections: [
+      {
+        heading: 'What This Service Includes',
+        content: [
+          'NEC-compliant electrical load calculations',
+          'Evaluation of existing service capacity and system constraints',
+          'Determination of whether a service upgrade is required or avoidable',
+          'Smart load management and load-sharing strategies',
+          'EV charger load management (Tesla Neurio and load-sharing systems)',
+          'Smart electrical panel installation and configuration (including SPAN panels)',
+          'Circuit-level energy monitoring and usage analysis',
+          'Load prioritization and intelligent circuit control',
+          'Integration with EV chargers, solar, and battery systems',
+          'Planning for future electrical expansion',
+          'Coordination with service upgrades when necessary',
+        ],
+      },
+      {
+        heading: 'Smart Panels & Energy Monitoring',
+        content: 'Modern smart panels provide real-time visibility into energy usage, enable intelligent load control, and support the integration of EV charging, solar, battery storage, and future electrical loads. Smart panels add flexibility, transparency, and long-term value to the electrical system while often reducing or eliminating the need for costly service upgrades.',
+      },
+      {
+        heading: 'Why This Matters',
+        content: 'Improper planning can lead to failed inspections, project delays, and unnecessary service upgrades. Our planning-first approach allows electrical installations to proceed efficiently, compliantly, and with long-term reliability in mind. When service upgrades are truly needed, proper planning ensures they are sized correctly for both current and future demands.',
+      },
+    ],
+    applications: [
+      'EV charger installations in capacity-limited properties',
+      'Solar- and battery-ready electrical planning',
+      'Residential remodels and additions',
+      'Multi-unit and mixed-use properties',
+      'Commercial tenant improvements',
+      'Properties seeking energy usage transparency and control',
+      'Projects requiring flexible power management',
+    ],
+    whoItFor: 'This service is for property owners, business owners, architects, and contractors who need to add significant electrical loads, require permit-ready documentation, want greater control over electrical usage, or prefer to avoid unnecessary upgrades while planning for future electrical needs.',
+  },
+  'service-upgrades': {
+    slug: 'service-upgrades',
+    title: 'Electrical Service Upgrades',
+    subtitle: 'Code-Compliant Service Upgrades for Modern Electrical Demand',
+    description: 'As properties add EV chargers, heat pumps, induction cooking, solar, battery storage, and new equipment, existing electrical services are often no longer sufficient. An undersized or outdated service can limit what a property can support and lead to safety, reliability, or permitting issues. Mirkovic Electric provides professional electrical service and panel upgrades for residential and commercial properties, with a focus on proper planning, clean execution, and long-term reliability.',
+    sections: [
+      {
+        heading: 'What This Service Includes',
+        content: [
+          'Assessment of existing electrical service and panel capacity',
+          'NEC-compliant load calculations',
+          'Determination of required service capacity (100A, 125A, 200A and above)',
+          'Main service upgrades and replacements',
+          'Panel replacements and relocations',
+          'Sub-panel additions for improved load distribution',
+          'Service equipment modernization and cleanup',
+          'Grounding and bonding upgrades as required',
+          'Service labeling and documentation',
+        ],
+      },
+      {
+        heading: 'Utility & Code Compliance',
+        content: 'Service upgrades affect the entire property and often involve utility coordination and permitting. We coordinate with PG&E and local utilities, manage permit documentation and inspections, and deliver clean, code-compliant work that supports both current and future demand. When an upgrade is required, we make sure it is done correctly and only when it is truly necessary.',
+      },
+      {
+        heading: 'Why This Matters',
+        content: 'Electrical service upgrades are significant investments that impact the entire property. Poor planning or shortcuts can result in delays, failed inspections, or systems that still fall short of future needs. We approach service upgrades deliberately, evaluating alternatives first, coordinating with utilities when required, and delivering clean, code-compliant work.',
+      },
+    ],
+    applications: [
+      'EV charger installations requiring additional capacity',
+      'Remodels and additions',
+      'Commercial tenant improvements',
+      'Solar, battery, or generator installations',
+      'Replacement of outdated or unsafe service equipment',
+      'Properties preparing for future electrification',
+    ],
+    whoItFor: 'This service is for property owners and businesses planning new electrical loads or needing to upgrade electrical service capacity to support modern equipment and future demands.',
+  },
   'ev-charging': {
     slug: 'ev-charging',
     title: 'EV Charging & Load Sharing',
@@ -49,83 +166,6 @@ export const services: Record<string, Service> = {
       'EV-ready planning for future vehicle adoption',
     ],
     whoItFor: 'This service is intended for homeowners, property managers, and business owners who want safe, compliant EV charging solutions that are designed around existing electrical capacity and future needs.',
-  },
-  'load-management': {
-    slug: 'load-management',
-    title: 'Load Management & Power Planning',
-    subtitle: 'Electrical Capacity Planning for Modern Properties',
-    description: 'Modern residential and commercial properties place increasing demands on electrical systems. EV chargers, heat pumps, induction cooking, solar, battery storage, and advanced audio or networked systems often exceed the capacity of existing electrical services if not properly planned. Mirkovic Electric provides load management and power planning services designed to safely integrate new electrical loads while minimizing unnecessary service upgrades and avoiding permitting or inspection issues.',
-    sections: [
-      {
-        heading: 'What This Service Includes',
-        content: [
-          'NEC-compliant electrical load calculations',
-          'Evaluation of existing service capacity (100A, 125A, 200A and above)',
-          'Identification of system constraints and limiting factors',
-          'EV charger load management (Tesla Neurio and load-sharing systems)',
-          'Smart load shedding and prioritization strategies',
-          'Coordination between EV charging, HVAC, and other major electrical loads',
-          'Planning to support future electrical expansion',
-          'Determination of when a panel or service upgrade is truly required',
-          'Alternatives to full service upgrades when feasible',
-          'Integration with smart panels and energy monitoring systems',
-        ],
-      },
-      {
-        heading: 'Why This Matters',
-        content: 'Improper planning can lead to failed inspections, project delays, and unnecessary service upgrades. Our planning-first approach allows electrical installations to proceed efficiently, compliantly, and with long-term reliability in mind.',
-      },
-      {
-        heading: 'Utility & Permitting Coordination',
-        content: 'When required, load management and power planning services may include documentation and coordination to support permit submittals and utility requirements, including load documentation, service capacity letters, PG&E coordination, and inspection support.',
-      },
-    ],
-    applications: [
-      'EV charger installations in capacity-limited properties',
-      'Solar- and battery-ready electrical planning',
-      'Residential remodels and additions',
-      'Multi-unit and mixed-use properties',
-      'Commercial tenant improvements',
-      'Pre-construction feasibility assessments',
-    ],
-    whoItFor: 'This service is intended for property owners, business owners, architects, and contractors who need to add significant electrical loads, require permit-ready documentation, or want to avoid unnecessary upgrades while planning for future electrical needs.',
-  },
-  'smart-panels': {
-    slug: 'smart-panels',
-    title: 'Smart Electrical Panels & Energy Monitoring',
-    subtitle: 'Advanced Control and Visibility for Modern Electrical Systems',
-    description: 'Electrical panels are no longer passive distribution equipment. Modern smart panels provide real-time visibility into energy usage, enable intelligent load control, and support the integration of EV charging, solar, battery storage, and future electrical loads. Mirkovic Electric designs and installs smart electrical panel solutions that improve system awareness, increase flexibility, and support long-term power planning for residential and commercial properties.',
-    sections: [
-      {
-        heading: 'What This Service Includes',
-        content: [
-          'Smart electrical panel installation and configuration (including SPAN panels)',
-          'Circuit-level energy monitoring and usage analysis',
-          'Load prioritization and intelligent circuit control',
-          'Integration with EV chargers, solar, and battery systems',
-          'Retrofit installations and new construction applications',
-          'Coordination with load management strategies',
-          'Support for future electrical expansion and system changes',
-          'Clear labeling and system documentation',
-        ],
-      },
-      {
-        heading: 'Integration With Other Services',
-        content: 'Smart panels are often deployed as part of a broader electrical strategy. They integrate directly with load management planning, EV charging systems, and utility coordination to provide a cohesive, future-ready electrical infrastructure.',
-      },
-      {
-        heading: 'Why Choose a Smart Panel',
-        content: 'Smart panels provide actionable insight into electrical usage while enabling control strategies that can reduce the need for costly service upgrades. When properly designed and installed, they add flexibility, transparency, and long-term value to the electrical system.',
-      },
-    ],
-    applications: [
-      'EV charger installations requiring intelligent load control',
-      'Properties preparing for solar or battery integration',
-      'Homes and businesses seeking energy usage transparency',
-      'Projects requiring flexible power management',
-      'Clients planning phased electrical upgrades',
-    ],
-    whoItFor: 'This service is ideal for property owners, business owners, and project teams who want greater control over electrical usage, plan to add major electrical loads, or require an adaptable system that can evolve over time.',
   },
   'permits-pge': {
     slug: 'permits-pge',
