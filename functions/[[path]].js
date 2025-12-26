@@ -170,36 +170,37 @@ export async function onRequest(context) {
       }
 
       // Text content replacements for service pages
+      // These defaults match services.ts - they will be replaced if custom text is saved in admin
       const serviceTextDefaults = {
         'ev-charging': {
-          'page-subtitle': 'Professional Installation',
-          'page-title': 'EV Charging Installation',
-          'page-description': 'Expert EV charger installation for Tesla, BMW, Audi &amp; more. Level 2 charging, panel upgrades, permit handling.',
+          'page-subtitle': 'System-Level EV Charging Solutions for Residential and Commercial Properties',
+          'page-title': 'EV Charging &amp; Load Sharing',
+          'page-description': 'Electric vehicle charging is one of the fastest-growing electrical loads in modern properties. When not properly planned, EV chargers can exceed available service capacity or trigger costly and unnecessary upgrades. Mirkovic Electric designs and installs EV charging systems that integrate safely with existing electrical infrastructure through load management, smart controls, and utility-aware planning.',
         },
         'power-planning': {
-          'page-subtitle': 'Smart Power Solutions',
-          'page-title': 'Power Planning &amp; Load Management',
-          'page-description': 'Professional electrical load analysis and power planning. Ensure your home can handle EVs, hot tubs, pools &amp; modern appliances.',
+          'page-subtitle': 'Advanced Electrical Planning for Modern High-Demand Systems',
+          'page-title': 'Power Planning, Load Management &amp; Smart Panels',
+          'page-description': 'Modern properties face increasing electrical demands from EVs, heat pumps, induction cooking, solar, battery storage, and advanced systems. Without proper planning, these loads can exceed service capacity, trigger unnecessary upgrades, or create permitting issues. Mirkovic Electric provides integrated power planning, load management, and smart panel solutions designed to safely support new electrical loads while minimizing costly service upgrades and avoiding compliance problems.',
         },
         'service-upgrades': {
-          'page-subtitle': 'Electrical Upgrades',
-          'page-title': 'Panel &amp; Service Upgrades',
-          'page-description': 'Upgrade from 100A to 200A or 400A. Smart panels, load management, PG&amp;E coordination.',
+          'page-subtitle': 'Code-Compliant Service Upgrades for Modern Electrical Demand',
+          'page-title': 'Electrical Service Upgrades',
+          'page-description': 'As properties add EV chargers, heat pumps, induction cooking, solar, battery storage, and new equipment, existing electrical services are often no longer sufficient. An undersized or outdated service can limit what a property can support and lead to safety, reliability, or permitting issues. Mirkovic Electric provides professional electrical service and panel upgrades for residential and commercial properties, with a focus on proper planning, clean execution, and long-term reliability.',
         },
         'permits-pge': {
-          'page-subtitle': 'Expert Coordination',
-          'page-title': 'Permits &amp; PG&amp;E Services',
-          'page-description': 'Complete permit handling and PG&amp;E coordination. We handle all inspections and paperwork.',
+          'page-subtitle': 'Pre-Construction Planning, Utility Coordination, and Inspection Support',
+          'page-title': 'Permits &amp; PG&amp;E Coordination',
+          'page-description': 'Electrical projects in the Bay Area frequently require coordination with local building departments and PG&amp;E. Service upgrades, EV charging installations, smart panels, and load management solutions often involve multiple approval steps before construction can begin. Mirkovic Electric manages the permitting and utility coordination process to reduce delays, avoid rejections, and ensure electrical work proceeds in compliance with local and utility requirements.',
         },
         'audio-systems': {
-          'page-subtitle': 'Smart Home Audio',
-          'page-title': 'Whole Home Audio Systems',
-          'page-description': 'Professional audio system installation. Sonos, multi-zone speakers, smart home integration.',
+          'page-subtitle': 'Reference-Grade Audio Infrastructure, System Design, and Integration',
+          'page-title': 'Audiophile Audio Systems &amp; Networked Playback',
+          'page-description': 'High-performance audio systems require more than quality components. Signal integrity, electrical noise control, proper grounding, and reliable network infrastructure all play a critical role in system performance. Mirkovic Electric designs and installs reference-grade audio infrastructure for clients who value sound quality, system reliability, and long-term flexibility. This service focuses on infrastructure, system topology, and bit-perfect signal delivery rather than consumer-grade audio packages.',
         },
         'general-electrical': {
-          'page-subtitle': 'All Electrical Services',
-          'page-title': 'General Electrical Work',
-          'page-description': 'Complete electrical services for residential and commercial properties. Licensed, insured, trusted.',
+          'page-subtitle': 'Professional Electrical Work for Residential and Commercial Properties',
+          'page-title': 'General Electrical &amp; Infrastructure',
+          'page-description': 'Modern electrical work for residential and commercial properties-done cleanly, safely, and built to support future needs. Mirkovic Electric provides professional electrical service, upgrades, and corrective work with the same planning-first mindset used on higher-complexity projects. We prioritize safe execution, code compliance, clear communication, and workmanship that holds up over time.',
         },
       };
 
