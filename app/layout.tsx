@@ -82,8 +82,10 @@ const localBusinessSchema = {
   priceRange: '$$',
   address: {
     '@type': 'PostalAddress',
+    streetAddress: '5229 Englewood Dr',
     addressLocality: 'San Jose',
     addressRegion: 'CA',
+    postalCode: '95129',
     addressCountry: 'US',
   },
   geo: {
@@ -117,8 +119,8 @@ const localBusinessSchema = {
   slogan: 'Modern Electrical Solutions for Today\'s High-Demand Properties',
   aggregateRating: {
     '@type': 'AggregateRating',
-    ratingValue: '5',
-    reviewCount: '47',
+    ratingValue: '5.0',
+    reviewCount: '24',
   },
   openingHoursSpecification: [
     {
