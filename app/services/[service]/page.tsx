@@ -55,31 +55,46 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
 
   return (
     <div className="w-full">
-      {/* Hero Section */}
-      <section className="relative min-h-[400px] sm:min-h-[500px] flex items-center justify-center overflow-hidden">
-        {/* Hero Background Image */}
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url('/images/hero/ev-charging-hero.webp')` }}
-        />
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-navy-900/90 via-navy-800/85 to-navy-900/90" />
-
-        {/* Content */}
-        <div className="relative z-10 container-max py-16 sm:py-20 text-white">
-          <Link href="/services/" className="text-accent-400 hover:text-accent-300 mb-4 inline-flex items-center gap-1 font-medium">
+      {/* Page Header - Clean & Simple */}
+      <section className="bg-white border-b border-gray-200">
+        <div className="container-max py-6 sm:py-8">
+          <Link href="/services/" className="text-accent-600 hover:text-accent-700 mb-4 inline-flex items-center gap-1 font-medium text-sm">
             <span aria-hidden="true">←</span> Back to Services
           </Link>
-          <h1 className="mb-4 text-white">{service.title}</h1>
-          <p className="text-lg sm:text-xl text-accent-300 font-medium mb-6 max-w-3xl">{service.subtitle}</p>
-          <p className="text-base sm:text-lg text-gray-200 mb-8 max-w-3xl">{service.description}</p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link href="/contact/" className="btn-primary text-center">
-              Request a Quote
-            </Link>
-            <a href="tel:(408)900-2672" className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white border-2 border-white/30 rounded-lg font-semibold transition-colors text-center">
-              Call: (408) 900-2672
-            </a>
+        </div>
+      </section>
+
+      {/* Simple Image Banner */}
+      <section className="bg-gray-50">
+        <div className="container-max py-8 sm:py-12">
+          <div className="max-w-4xl mx-auto">
+            {/* Image */}
+            <div className="mb-8">
+              <img
+                src="/images/hero/ev-charging-hero.webp"
+                alt={service.title}
+                className="w-full h-48 sm:h-64 md:h-80 object-cover rounded-lg shadow-md"
+              />
+            </div>
+
+            {/* Content - These defaults will be replaced by edge function based on page */}
+            <div className="text-center max-w-3xl mx-auto">
+              <p className="text-accent-600 font-semibold text-sm sm:text-base uppercase tracking-wide mb-3">
+                {service.subtitle}
+              </p>
+              <h1 className="mb-4 text-navy-900">{service.title}</h1>
+              <p className="text-base sm:text-lg text-gray-600 mb-8 leading-relaxed">
+                {service.description}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/contact/" className="btn-primary text-center">
+                  Request a Quote
+                </Link>
+                <a href="tel:(408)900-2672" className="px-6 py-3 bg-navy-800 hover:bg-navy-900 text-white rounded-lg font-semibold transition-colors text-center">
+                  Call: (408) 900-2672
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
