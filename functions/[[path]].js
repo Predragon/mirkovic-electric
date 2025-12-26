@@ -3,6 +3,17 @@
  * This runs at the edge and modifies the HTML before serving
  */
 
+// Helper function to escape HTML special characters
+function escapeHtml(text) {
+  if (!text) return '';
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#x27;');
+}
+
 export async function onRequest(context) {
   const { request, env, next } = context;
   const url = new URL(request.url);
@@ -67,6 +78,11 @@ export async function onRequest(context) {
         type: row.content_type || 'image' // Default to image for backwards compatibility
       };
     });
+
+    // Fetch SEO metadata for this page
+    const seoResult = await env.DB.prepare(`
+      SELECT * FROM seo_metadata WHERE page_id = ?
+    `).bind(pageId).first();
 
     // Get the HTML
     let html = await response.text();
@@ -151,6 +167,66 @@ export async function onRequest(context) {
           /\/images\/hero\/[a-zA-Z0-9\-_]+\.(webp|jpg|jpeg|png)/g,
           content['hero'].value
         );
+      }
+    }
+
+    // Inject SEO meta tags if available
+    if (seoResult) {
+      const metaTags = [];
+
+      // Title tag
+      if (seoResult.meta_title) {
+        html = html.replace(/<title>.*?<\/title>/i, `<title>${escapeHtml(seoResult.meta_title)}</title>`);
+      }
+
+      // Meta description
+      if (seoResult.meta_description) {
+        metaTags.push(`<meta name="description" content="${escapeHtml(seoResult.meta_description)}">`);
+      }
+
+      // Robots
+      if (seoResult.robots) {
+        metaTags.push(`<meta name="robots" content="${escapeHtml(seoResult.robots)}">`);
+      }
+
+      // Canonical URL
+      if (seoResult.canonical_url) {
+        metaTags.push(`<link rel="canonical" href="${escapeHtml(seoResult.canonical_url)}">`);
+      }
+
+      // Open Graph tags
+      const ogTitle = seoResult.og_title || seoResult.meta_title;
+      const ogDescription = seoResult.og_description || seoResult.meta_description;
+
+      if (ogTitle) {
+        metaTags.push(`<meta property="og:title" content="${escapeHtml(ogTitle)}">`);
+      }
+      if (ogDescription) {
+        metaTags.push(`<meta property="og:description" content="${escapeHtml(ogDescription)}">`);
+      }
+      if (seoResult.og_image) {
+        metaTags.push(`<meta property="og:image" content="${escapeHtml(seoResult.og_image)}">`);
+      }
+      metaTags.push(`<meta property="og:type" content="website">`);
+
+      // Twitter Card tags
+      if (seoResult.twitter_card) {
+        metaTags.push(`<meta name="twitter:card" content="${escapeHtml(seoResult.twitter_card)}">`);
+      }
+      if (ogTitle) {
+        metaTags.push(`<meta name="twitter:title" content="${escapeHtml(ogTitle)}">`);
+      }
+      if (ogDescription) {
+        metaTags.push(`<meta name="twitter:description" content="${escapeHtml(ogDescription)}">`);
+      }
+      if (seoResult.og_image) {
+        metaTags.push(`<meta name="twitter:image" content="${escapeHtml(seoResult.og_image)}">`);
+      }
+
+      // Inject all meta tags before </head>
+      if (metaTags.length > 0) {
+        const tagsHtml = '\n  ' + metaTags.join('\n  ') + '\n  ';
+        html = html.replace('</head>', tagsHtml + '</head>');
       }
     }
 
