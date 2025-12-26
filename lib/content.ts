@@ -60,11 +60,22 @@ export function getImageUrl(
  * Returns 'draft' for staging, 'published' for production
  */
 export function getContentStatus(): 'draft' | 'published' {
+  // Cloudflare Pages provides CF_PAGES_BRANCH during build
+  // For staging deployments, it will be 'staging'
+  // For production deployments, it will be 'main'
+  const branch = process.env.CF_PAGES_BRANCH;
+
+  console.log('[getContentStatus] CF_PAGES_BRANCH:', branch);
+  console.log('[getContentStatus] NEXT_PUBLIC_ENV:', process.env.NEXT_PUBLIC_ENV);
+
   // Check if we're in staging environment
   const isStaging =
+    branch === 'staging' ||
     process.env.NEXT_PUBLIC_ENV === 'staging' ||
-    process.env.VERCEL_ENV === 'preview' ||
-    process.env.CF_PAGES_BRANCH === 'staging';
+    process.env.VERCEL_ENV === 'preview';
 
-  return isStaging ? 'draft' : 'published';
+  const status = isStaging ? 'draft' : 'published';
+  console.log('[getContentStatus] Returning status:', status);
+
+  return status;
 }
