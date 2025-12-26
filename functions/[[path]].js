@@ -158,8 +158,8 @@ export async function onRequest(context) {
         }
       });
     } else {
-      // All other pages: just 'hero' section
-      // Replace the hero background image in the page
+      // Service pages and other pages: hero image + text sections
+      // Replace the hero background image
       if (content['hero'] && content['hero'].type === 'image') {
         // Match hero images in inline styles: style={{ backgroundImage: `url('/images/hero/...')` }}
         // Also match direct src attributes: src="/images/hero/..."
@@ -167,6 +167,64 @@ export async function onRequest(context) {
           /\/images\/hero\/[a-zA-Z0-9\-_]+\.(webp|jpg|jpeg|png)/g,
           content['hero'].value
         );
+      }
+
+      // Text content replacements for service pages
+      const serviceTextDefaults: Record<string, Record<string, string>> = {
+        'ev-charging': {
+          'page-subtitle': 'Professional Installation',
+          'page-title': 'EV Charging Installation',
+          'page-description': 'Expert EV charger installation for Tesla, BMW, Audi &amp; more. Level 2 charging, panel upgrades, permit handling.',
+        },
+        'power-planning': {
+          'page-subtitle': 'Smart Power Solutions',
+          'page-title': 'Power Planning &amp; Load Management',
+          'page-description': 'Professional electrical load analysis and power planning. Ensure your home can handle EVs, hot tubs, pools &amp; modern appliances.',
+        },
+        'service-upgrades': {
+          'page-subtitle': 'Electrical Upgrades',
+          'page-title': 'Panel &amp; Service Upgrades',
+          'page-description': 'Upgrade from 100A to 200A or 400A. Smart panels, load management, PG&amp;E coordination.',
+        },
+        'permits-pge': {
+          'page-subtitle': 'Expert Coordination',
+          'page-title': 'Permits &amp; PG&amp;E Services',
+          'page-description': 'Complete permit handling and PG&amp;E coordination. We handle all inspections and paperwork.',
+        },
+        'audio-systems': {
+          'page-subtitle': 'Smart Home Audio',
+          'page-title': 'Whole Home Audio Systems',
+          'page-description': 'Professional audio system installation. Sonos, multi-zone speakers, smart home integration.',
+        },
+        'general-electrical': {
+          'page-subtitle': 'All Electrical Services',
+          'page-title': 'General Electrical Work',
+          'page-description': 'Complete electrical services for residential and commercial properties. Licensed, insured, trusted.',
+        },
+      };
+
+      const defaults = serviceTextDefaults[pageId];
+      if (defaults) {
+        // Replace page subtitle
+        if (content['page-subtitle'] && content['page-subtitle'].type === 'text') {
+          const escaped = escapeHtml(content['page-subtitle'].value);
+          const regex = new RegExp(defaults['page-subtitle'].replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
+          html = html.replace(regex, escaped);
+        }
+
+        // Replace page title
+        if (content['page-title'] && content['page-title'].type === 'text') {
+          const escaped = escapeHtml(content['page-title'].value);
+          const regex = new RegExp(defaults['page-title'].replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
+          html = html.replace(regex, escaped);
+        }
+
+        // Replace page description
+        if (content['page-description'] && content['page-description'].type === 'text') {
+          const escaped = escapeHtml(content['page-description'].value);
+          const regex = new RegExp(defaults['page-description'].replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
+          html = html.replace(regex, escaped);
+        }
       }
     }
 
