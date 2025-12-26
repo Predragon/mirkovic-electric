@@ -16,27 +16,36 @@ export async function getPageContent(
   pageId: string,
   status: 'draft' | 'published' = 'published'
 ): Promise<PageContent> {
-  try {
-    // Determine which environment we're in
-    const apiBaseUrl = process.env.NEXT_PUBLIC_API_URL || 'https://admin.mirkovicelectric.com';
+  const apiBaseUrl = process.env.NEXT_PUBLIC_API_URL || 'https://admin.mirkovicelectric.com';
+  const url = `${apiBaseUrl}/api/public/content?page=${pageId}&status=${status}`;
 
-    const response = await fetch(
-      `${apiBaseUrl}/api/public/content?page=${pageId}&status=${status}`,
-      {
-        // Revalidate every hour in production, never cache in staging
-        next: { revalidate: status === 'published' ? 3600 : 0 }
-      }
-    );
+  console.log('='.repeat(80));
+  console.log('[getPageContent] FETCH START');
+  console.log(`  Page: ${pageId}, Status: ${status}`);
+  console.log(`  URL: ${url}`);
+  console.log('='.repeat(80));
+
+  try {
+    const response = await fetch(url, {
+      next: { revalidate: status === 'published' ? 3600 : 0 }
+    });
+
+    console.log(`[getPageContent] Response: ${response.status} ${response.statusText}`);
 
     if (!response.ok) {
-      console.error(`Failed to fetch content for page ${pageId}:`, await response.text());
+      const errorText = await response.text();
+      console.error(`[getPageContent] ❌ FETCH FAILED:`, errorText);
       return {};
     }
 
     const data = await response.json();
+    const contentKeys = Object.keys(data.content || {});
+    console.log(`[getPageContent] ✅ SUCCESS - Fetched ${contentKeys.length} items:`, contentKeys);
+
     return data.content || {};
   } catch (error) {
-    console.error(`Error fetching content for page ${pageId}:`, error);
+    const errorMsg = error instanceof Error ? error.message : String(error);
+    console.error(`[getPageContent] ❌ EXCEPTION:`, errorMsg);
     return {};
   }
 }
