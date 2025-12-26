@@ -108,13 +108,6 @@ export default function Header() {
               Home
             </Link>
             <Link
-              href="/services/"
-              className="text-gray-200 hover:text-white hover:bg-navy-700 py-3 px-4 rounded-lg transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              Services
-            </Link>
-            <Link
               href="/contact/"
               className="text-gray-200 hover:text-white hover:bg-navy-700 py-3 px-4 rounded-lg transition-colors"
               onClick={() => setIsOpen(false)}

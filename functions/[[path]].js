@@ -49,7 +49,7 @@ export async function onRequest(context) {
   try {
     // Fetch page content from database
     const contentResult = await env.DB.prepare(`
-      SELECT section_id, content_value
+      SELECT section_id, content_value, content_type
       FROM page_content
       WHERE page_id = ? AND (
         status = ?
@@ -59,10 +59,13 @@ export async function onRequest(context) {
       )
     `).bind(pageId, status, pageId, status).all();
 
-    // Build content map
+    // Build content map with type information
     const content = {};
     contentResult.results.forEach((row) => {
-      content[row.section_id] = row.content_value;
+      content[row.section_id] = {
+        value: row.content_value,
+        type: row.content_type || 'image' // Default to image for backwards compatibility
+      };
     });
 
     // Get the HTML
@@ -70,11 +73,11 @@ export async function onRequest(context) {
 
     // Inject content based on page type
     if (pageId === 'homepage') {
-      // Homepage: hero-background + 6 cards
-      if (content['hero-background']) {
+      // Homepage: hero-background + 6 cards (images)
+      if (content['hero-background'] && content['hero-background'].type === 'image') {
         html = html.replace(
           /\/images\/hero\/ev-charging-hero\.webp/g,
-          content['hero-background']
+          content['hero-background'].value
         );
       }
 
@@ -88,20 +91,65 @@ export async function onRequest(context) {
       ];
 
       cardMappings.forEach(({ key, default: defaultPath }) => {
-        if (content[key]) {
+        if (content[key] && content[key].type === 'image') {
           const regex = new RegExp(defaultPath.replace(/\//g, '\\/'), 'g');
-          html = html.replace(regex, content[key]);
+          html = html.replace(regex, content[key].value);
+        }
+      });
+
+      // Text content replacements
+      const textReplacements = [
+        {
+          key: 'hero-subtitle',
+          default: 'Licensed Bay Area Electrician Since 1991'
+        },
+        {
+          key: 'hero-title',
+          default: 'Modern Electrical Solutions for Today&#x27;s High-Demand Properties'
+        },
+        {
+          key: 'hero-description',
+          default: 'EV charging, smart panels, load management, and expert PG&amp;E coordination. Trusted by Bay Area homeowners for over 30 years.'
+        },
+        {
+          key: 'services-subtitle',
+          default: 'What We Do'
+        },
+        {
+          key: 'services-title',
+          default: 'Our Services'
+        },
+        {
+          key: 'services-description',
+          default: 'Comprehensive electrical solutions for modern homes and businesses'
+        }
+      ];
+
+      textReplacements.forEach(({ key, default: defaultText }) => {
+        if (content[key] && content[key].type === 'text') {
+          // Escape special HTML characters in the replacement text
+          const escapedValue = content[key].value
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#x27;');
+
+          // Replace the default text with the custom text
+          // Use a flexible pattern that handles potential whitespace variations
+          const regex = new RegExp(defaultText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
+          html = html.replace(regex, escapedValue);
         }
       });
     } else {
       // All other pages: just 'hero' section
       // Replace the hero background image in the page
-      if (content['hero']) {
+      if (content['hero'] && content['hero'].type === 'image') {
         // Match hero images in inline styles: style={{ backgroundImage: `url('/images/hero/...')` }}
         // Also match direct src attributes: src="/images/hero/..."
         html = html.replace(
           /\/images\/hero\/[a-zA-Z0-9\-_]+\.(webp|jpg|jpeg|png)/g,
-          content['hero']
+          content['hero'].value
         );
       }
     }
