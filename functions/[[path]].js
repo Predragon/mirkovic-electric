@@ -3,13 +3,7 @@
  * This runs at the edge and modifies the HTML before serving
  */
 
-interface Env {
-  ASSETS: Fetcher;
-  DB: D1Database;
-  R2_PUBLIC_URL: string;
-}
-
-export async function onRequest(context: EventContext<Env, any, any>) {
+export async function onRequest(context) {
   const { request, env, next } = context;
   const url = new URL(request.url);
 
@@ -50,8 +44,8 @@ export async function onRequest(context: EventContext<Env, any, any>) {
     `).bind('homepage', status, 'homepage', status).all();
 
     // Build content map
-    const content: Record<string, string> = {};
-    contentResult.results.forEach((row: any) => {
+    const content = {};
+    contentResult.results.forEach((row) => {
       content[row.section_id] = row.content_value;
     });
 
