@@ -14,7 +14,7 @@ export default function Home() {
       {/* Hero Section with Parallax */}
       <ParallaxHero
         imageSrc="/images/hero/ev-charging-hero.webp"
-        imageAlt="Modern Electrical Solutions"
+        imageAlt="Professional EV Charger Installation Bay Area - Licensed Electrician San Jose"
       >
         <div className="container-max relative z-10 py-16">
           <div className="max-w-2xl">
@@ -84,7 +84,7 @@ export default function Home() {
             <ParallaxCard
               href="/services/general-electrical/"
               imageSrc="/images/cards/general-electrical-full.webp"
-              imageAlt="General Electrical Services"
+              imageAlt="Licensed Electrician Bay Area - Residential & Commercial Electrical Repairs San Jose"
               title="General Electrical Services"
               description="Troubleshooting, repairs, dedicated circuits & maintenance"
             />
@@ -92,7 +92,7 @@ export default function Home() {
             <ParallaxCard
               href="/services/power-planning/"
               imageSrc="/images/cards/load-management-full.webp"
-              imageAlt="Power Planning & Load Management"
+              imageAlt="Smart Load Management Systems Bay Area - Electrical Panel Optimization Palo Alto"
               title="Power Planning & Smart Panels"
               description="Load management, smart panels & capacity optimization"
             />
@@ -100,7 +100,7 @@ export default function Home() {
             <ParallaxCard
               href="/services/service-upgrades/"
               imageSrc="/images/cards/smart-panels-full.webp"
-              imageAlt="Electrical Service Upgrades"
+              imageAlt="Electrical Panel Upgrade Service Bay Area - 200 Amp Panel Installation San Jose"
               title="Electrical Service Upgrades"
               description="Panel replacements & service capacity upgrades"
             />
@@ -111,7 +111,7 @@ export default function Home() {
             <ParallaxCard
               href="/services/ev-charging/"
               imageSrc="/images/cards/ev-charging-full.webp"
-              imageAlt="EV Charging Solutions"
+              imageAlt="Tesla EV Charger Installation Bay Area - Level 2 Electric Vehicle Charging San Jose Palo Alto"
               title="EV Charging Solutions"
               description="Level 2 chargers, load sharing & smart scheduling"
             />
@@ -119,7 +119,7 @@ export default function Home() {
             <ParallaxCard
               href="/services/permits-pge/"
               imageSrc="/images/cards/permits-pge-full.webp"
-              imageAlt="Permits & PG&E Coordination"
+              imageAlt="PG&E Electrical Permits Bay Area - Utility Coordination & Code Compliance San Jose"
               title="Permits & PG&E Coordination"
               description="Full permit handling & utility upgrades"
             />
@@ -127,7 +127,7 @@ export default function Home() {
             <ParallaxCard
               href="/services/audio-systems/"
               imageSrc="/images/cards/audio-systems-full.webp"
-              imageAlt="Audiophile Audio Systems"
+              imageAlt="Audiophile Electrical Systems Bay Area - Dedicated Audio Circuits Clean Power San Jose"
               title="Audiophile Audio Systems"
               description="Dedicated circuits & clean power solutions"
             />

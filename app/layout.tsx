@@ -10,7 +10,7 @@ const inter = Inter({
   variable: '--font-inter',
 })
 
-const siteUrl = 'https://landing.mirkovicelectric.com'
+const siteUrl = 'https://mirkovicelectric.com'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -115,6 +115,50 @@ const localBusinessSchema = {
   sameAs: [],
   foundingDate: '1991',
   slogan: 'Modern Electrical Solutions for Today\'s High-Demand Properties',
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '5',
+    reviewCount: '47',
+  },
+}
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Do you install EV chargers in the Bay Area?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes, we specialize in EV charging installations throughout San Jose, Palo Alto, Menlo Park, and surrounding Bay Area cities. We handle everything from permits to PG&E coordination.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Are you a licensed electrical contractor?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes, Mirkovic Electric is a licensed C-10 electrical contractor (License #627414) serving the Bay Area since 1991 with over 30 years of experience.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'What is load management for electrical systems?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Load management optimizes your electrical capacity to handle high-demand appliances like EV chargers without requiring expensive panel upgrades. We install smart systems that intelligently distribute power.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Do you handle PG&E permits and coordination?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes, we manage all PG&E paperwork, permits, and coordination for your electrical projects. We ensure code compliance and handle all utility requirements.'
+      }
+    }
+  ]
 }
 
 export default function RootLayout({
@@ -132,6 +176,12 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(localBusinessSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(faqSchema),
           }}
         />
       </head>
