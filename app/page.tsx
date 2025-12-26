@@ -2,18 +2,32 @@ import Link from 'next/link'
 import Image from 'next/image'
 import ParallaxCard from '@/components/ui/ParallaxCard'
 import ParallaxHero from '@/components/ui/ParallaxHero'
+import { getPageContent, getImageUrl, getContentStatus } from '@/lib/content'
 
 export const metadata = {
   title: 'Mirkovic Electric | Licensed Bay Area Electrical Contractor',
   description: 'Modern electrical solutions for high-demand residential and commercial properties. EV charging, load management, smart panels, permits, and audio systems. Licensed Bay Area Electrician Since 1991.',
 }
 
-export default function Home() {
+export default async function Home() {
+  // Fetch page content from database
+  const status = getContentStatus();
+  const content = await getPageContent('homepage', status);
+
+  // Define fallback images (defaults)
+  const heroImage = getImageUrl(content, 'hero-background', '/images/hero/ev-charging-hero.webp');
+  const card1Image = getImageUrl(content, 'card-1', '/images/cards/general-electrical-full.webp');
+  const card2Image = getImageUrl(content, 'card-2', '/images/cards/load-management-full.webp');
+  const card3Image = getImageUrl(content, 'card-3', '/images/cards/smart-panels-full.webp');
+  const card4Image = getImageUrl(content, 'card-4', '/images/cards/ev-charging-full.webp');
+  const card5Image = getImageUrl(content, 'card-5', '/images/cards/permits-pge-full.webp');
+  const card6Image = getImageUrl(content, 'card-6', '/images/cards/audio-systems-full.webp');
+
   return (
     <div className="w-full">
       {/* Hero Section with Parallax */}
       <ParallaxHero
-        imageSrc="/images/hero/ev-charging-hero.webp"
+        imageSrc={heroImage}
         imageAlt="Professional EV Charger Installation Bay Area - Licensed Electrician San Jose"
       >
         <div className="container-max relative z-10 py-16">
@@ -83,7 +97,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-8">
             <ParallaxCard
               href="/services/general-electrical/"
-              imageSrc="/images/cards/general-electrical-full.webp"
+              imageSrc={card1Image}
               imageAlt="Licensed Electrician Bay Area - Residential & Commercial Electrical Repairs San Jose"
               title="General Electrical Services"
               description="Troubleshooting, repairs, dedicated circuits & maintenance"
@@ -91,7 +105,7 @@ export default function Home() {
 
             <ParallaxCard
               href="/services/power-planning/"
-              imageSrc="/images/cards/load-management-full.webp"
+              imageSrc={card2Image}
               imageAlt="Smart Load Management Systems Bay Area - Electrical Panel Optimization Palo Alto"
               title="Power Planning & Smart Panels"
               description="Load management, smart panels & capacity optimization"
@@ -99,7 +113,7 @@ export default function Home() {
 
             <ParallaxCard
               href="/services/service-upgrades/"
-              imageSrc="/images/cards/smart-panels-full.webp"
+              imageSrc={card3Image}
               imageAlt="Electrical Panel Upgrade Service Bay Area - 200 Amp Panel Installation San Jose"
               title="Electrical Service Upgrades"
               description="Panel replacements & service capacity upgrades"
@@ -110,7 +124,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <ParallaxCard
               href="/services/ev-charging/"
-              imageSrc="/images/cards/ev-charging-full.webp"
+              imageSrc={card4Image}
               imageAlt="Tesla EV Charger Installation Bay Area - Level 2 Electric Vehicle Charging San Jose Palo Alto"
               title="EV Charging Solutions"
               description="Level 2 chargers, load sharing & smart scheduling"
@@ -118,7 +132,7 @@ export default function Home() {
 
             <ParallaxCard
               href="/services/permits-pge/"
-              imageSrc="/images/cards/permits-pge-full.webp"
+              imageSrc={card5Image}
               imageAlt="PG&E Electrical Permits Bay Area - Utility Coordination & Code Compliance San Jose"
               title="Permits & PG&E Coordination"
               description="Full permit handling & utility upgrades"
@@ -126,7 +140,7 @@ export default function Home() {
 
             <ParallaxCard
               href="/services/audio-systems/"
-              imageSrc="/images/cards/audio-systems-full.webp"
+              imageSrc={card6Image}
               imageAlt="Audiophile Electrical Systems Bay Area - Dedicated Audio Circuits Clean Power San Jose"
               title="Audiophile Audio Systems"
               description="Dedicated circuits & clean power solutions"
