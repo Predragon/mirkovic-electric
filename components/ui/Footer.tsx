@@ -49,13 +49,13 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/services/load-management/" className="text-gray-400 hover:text-white transition-colors">
-                  Load Management
+                <Link href="/services/power-planning/" className="text-gray-400 hover:text-white transition-colors">
+                  Power Planning
                 </Link>
               </li>
               <li>
-                <Link href="/services/smart-panels/" className="text-gray-400 hover:text-white transition-colors">
-                  Smart Panels
+                <Link href="/services/service-upgrades/" className="text-gray-400 hover:text-white transition-colors">
+                  Service Upgrades
                 </Link>
               </li>
               <li>
