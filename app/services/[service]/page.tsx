@@ -64,21 +64,12 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
         </div>
       </section>
 
-      {/* Simple Image Banner */}
+      {/* Content First - Text & CTAs */}
       <section className="bg-gray-50">
         <div className="container-max py-8 sm:py-12">
           <div className="max-w-4xl mx-auto">
-            {/* Image */}
-            <div className="mb-8">
-              <img
-                src="/images/hero/ev-charging-hero.webp"
-                alt={service.title}
-                className="w-full h-48 sm:h-64 md:h-80 object-cover rounded-lg shadow-md"
-              />
-            </div>
-
             {/* Content - These defaults will be replaced by edge function based on page */}
-            <div className="text-center max-w-3xl mx-auto">
+            <div className="text-center max-w-3xl mx-auto mb-8">
               <p className="text-accent-600 font-semibold text-sm sm:text-base uppercase tracking-wide mb-3">
                 {service.subtitle}
               </p>
@@ -94,6 +85,15 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
                   Call: (408) 900-2672
                 </a>
               </div>
+            </div>
+
+            {/* Image Banner - Below CTAs */}
+            <div className="mt-12">
+              <img
+                src="/images/hero/ev-charging-hero.webp"
+                alt={service.title}
+                className="w-full h-48 sm:h-64 md:h-80 object-cover rounded-lg shadow-md"
+              />
             </div>
           </div>
         </div>
