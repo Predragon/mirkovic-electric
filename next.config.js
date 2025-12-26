@@ -14,6 +14,10 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  env: {
+    // Expose Cloudflare Pages branch during build
+    CF_PAGES_BRANCH: process.env.CF_PAGES_BRANCH || 'main',
+  },
 }
 
 module.exports = nextConfig
