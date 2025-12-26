@@ -97,8 +97,8 @@ export async function onRequest(context) {
       // All other pages: just 'hero' section
       // Replace the hero background image in the page
       if (content['hero']) {
-        // This will match any hero image path in the HTML
-        // We'll use a more generic approach: replace common hero image paths
+        // Match hero images in inline styles: style={{ backgroundImage: `url('/images/hero/...')` }}
+        // Also match direct src attributes: src="/images/hero/..."
         html = html.replace(
           /\/images\/hero\/[a-zA-Z0-9\-_]+\.(webp|jpg|jpeg|png)/g,
           content['hero']

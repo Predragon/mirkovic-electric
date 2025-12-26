@@ -56,19 +56,28 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-b from-gray-50 to-white">
-        <div className="container-max">
-          <Link href="/services/" className="text-accent-500 hover:text-accent-600 mb-4 inline-flex items-center gap-1 font-medium">
+      <section className="relative min-h-[400px] sm:min-h-[500px] flex items-center justify-center overflow-hidden">
+        {/* Hero Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url('/images/hero/ev-charging-hero.webp')` }}
+        />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-navy-900/90 via-navy-800/85 to-navy-900/90" />
+
+        {/* Content */}
+        <div className="relative z-10 container-max py-16 sm:py-20 text-white">
+          <Link href="/services/" className="text-accent-400 hover:text-accent-300 mb-4 inline-flex items-center gap-1 font-medium">
             <span aria-hidden="true">←</span> Back to Services
           </Link>
-          <h1 className="mb-4">{service.title}</h1>
-          <p className="text-lg sm:text-xl text-accent-500 font-medium mb-6 max-w-3xl">{service.subtitle}</p>
-          <p className="text-base sm:text-lg text-gray-600 mb-8 max-w-3xl">{service.description}</p>
+          <h1 className="mb-4 text-white">{service.title}</h1>
+          <p className="text-lg sm:text-xl text-accent-300 font-medium mb-6 max-w-3xl">{service.subtitle}</p>
+          <p className="text-base sm:text-lg text-gray-200 mb-8 max-w-3xl">{service.description}</p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/contact/" className="btn-primary text-center">
               Request a Quote
             </Link>
-            <a href="tel:(408)900-2672" className="btn-secondary text-center">
+            <a href="tel:(408)900-2672" className="px-6 py-3 bg-white/10 hover:bg-white/20 text-white border-2 border-white/30 rounded-lg font-semibold transition-colors text-center">
               Call: (408) 900-2672
             </a>
           </div>

@@ -50,14 +50,23 @@ export default function Services() {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-b from-gray-50 to-white">
-        <div className="container-max text-center">
-          <p className="text-accent-500 font-semibold mb-2 tracking-wide uppercase text-sm">What We Do</p>
-          <h1 className="mb-6">Our Services</h1>
-          <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-4">
+      <section className="relative min-h-[400px] sm:min-h-[500px] flex items-center justify-center overflow-hidden">
+        {/* Hero Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url('/images/hero/services-hero.webp')` }}
+        />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-navy-900/90 via-navy-800/85 to-navy-900/90" />
+
+        {/* Content */}
+        <div className="relative z-10 container-max py-16 sm:py-20 text-center text-white">
+          <p className="text-accent-400 font-semibold mb-2 tracking-wide uppercase text-sm">What We Do</p>
+          <h1 className="mb-6 text-white">Our Services</h1>
+          <p className="text-lg sm:text-xl text-gray-200 max-w-2xl mx-auto mb-4">
             Modern electrical solutions for residential and commercial properties—planned, permitted, and built to support today's higher electrical demands.
           </p>
-          <p className="text-base text-gray-500 max-w-2xl mx-auto">
+          <p className="text-base text-gray-300 max-w-2xl mx-auto">
             Our work is grounded in code compliance, clean execution, and long-term reliability. Whether you need core electrical infrastructure, advanced power planning, or specialty systems, we approach every project with the same planning-first mindset.
           </p>
         </div>
