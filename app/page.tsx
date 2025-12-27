@@ -310,6 +310,92 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container-max">
+          <div className="text-center mb-12">
+            <p className="text-accent-500 font-semibold mb-2 tracking-wide uppercase text-sm">Got Questions?</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-navy-800 mb-4">Frequently Asked Questions</h2>
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+              Quick answers to common questions about our electrical services
+            </p>
+          </div>
+
+          <div className="max-w-3xl mx-auto space-y-4">
+            {/* FAQ 1 */}
+            <details className="group bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+              <summary className="flex justify-between items-center cursor-pointer p-6 hover:bg-gray-50 transition-colors">
+                <h3 className="text-lg font-semibold text-navy-800 pr-8">
+                  Do you install EV chargers in the Bay Area?
+                </h3>
+                <span className="text-accent-500 font-bold text-2xl group-open:rotate-45 transition-transform">
+                  +
+                </span>
+              </summary>
+              <div className="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
+                Yes, we specialize in EV charging installations throughout San Jose, Palo Alto, Menlo Park, and surrounding Bay Area cities. We handle everything from permits to PG&E coordination.
+              </div>
+            </details>
+
+            {/* FAQ 2 */}
+            <details className="group bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+              <summary className="flex justify-between items-center cursor-pointer p-6 hover:bg-gray-50 transition-colors">
+                <h3 className="text-lg font-semibold text-navy-800 pr-8">
+                  Are you a licensed electrical contractor?
+                </h3>
+                <span className="text-accent-500 font-bold text-2xl group-open:rotate-45 transition-transform">
+                  +
+                </span>
+              </summary>
+              <div className="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
+                Yes, Mirkovic Electric is a licensed C-10 electrical contractor (License #627414) serving the Bay Area since 1991 with over 30 years of experience.
+              </div>
+            </details>
+
+            {/* FAQ 3 */}
+            <details className="group bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+              <summary className="flex justify-between items-center cursor-pointer p-6 hover:bg-gray-50 transition-colors">
+                <h3 className="text-lg font-semibold text-navy-800 pr-8">
+                  What is load management for electrical systems?
+                </h3>
+                <span className="text-accent-500 font-bold text-2xl group-open:rotate-45 transition-transform">
+                  +
+                </span>
+              </summary>
+              <div className="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
+                Load management optimizes your electrical capacity to handle high-demand appliances like EV chargers without requiring expensive panel upgrades. We install smart systems that intelligently distribute power.
+              </div>
+            </details>
+
+            {/* FAQ 4 */}
+            <details className="group bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+              <summary className="flex justify-between items-center cursor-pointer p-6 hover:bg-gray-50 transition-colors">
+                <h3 className="text-lg font-semibold text-navy-800 pr-8">
+                  Do you handle PG&E permits and coordination?
+                </h3>
+                <span className="text-accent-500 font-bold text-2xl group-open:rotate-45 transition-transform">
+                  +
+                </span>
+              </summary>
+              <div className="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
+                Yes, we manage all PG&E paperwork, permits, and coordination for your electrical projects. We ensure code compliance and handle all utility requirements.
+              </div>
+            </details>
+          </div>
+
+          {/* Still have questions CTA */}
+          <div className="text-center mt-12">
+            <p className="text-gray-600 mb-4">Still have questions?</p>
+            <Link
+              href="/contact/"
+              className="inline-block px-8 py-3 bg-accent-500 hover:bg-accent-600 text-white rounded-lg font-semibold transition-colors"
+            >
+              Contact Us
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Service Areas & CTA */}
       <section className="py-16 bg-gray-100">
         <div className="container-max">
