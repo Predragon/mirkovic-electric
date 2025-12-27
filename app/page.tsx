@@ -82,6 +82,37 @@ export default async function Home() {
         </div>
       </ParallaxHero>
 
+      {/* Stats Bar */}
+      <section className="py-12 bg-white border-y border-gray-200">
+        <div className="container-max">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+            {/* Stat 1 */}
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-accent-500 mb-2">500+</div>
+              <div className="text-sm md:text-base text-gray-600">Projects Completed</div>
+            </div>
+
+            {/* Stat 2 */}
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-accent-500 mb-2">30+</div>
+              <div className="text-sm md:text-base text-gray-600">Years Experience</div>
+            </div>
+
+            {/* Stat 3 */}
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-accent-500 mb-2">24</div>
+              <div className="text-sm md:text-base text-gray-600">Five-Star Reviews</div>
+            </div>
+
+            {/* Stat 4 */}
+            <div className="text-center">
+              <div className="text-3xl md:text-4xl font-bold text-accent-500 mb-2">C-10</div>
+              <div className="text-sm md:text-base text-gray-600">Licensed & Insured</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Our Services Section */}
       <section className="py-16 bg-gradient-to-b from-gray-50 to-white">
         <div className="container-max">
