@@ -57,27 +57,6 @@ export default async function Home() {
                 Call (408) 900-2672
               </a>
             </div>
-            {/* Trust Badges */}
-            <div className="flex flex-wrap items-center gap-6 mt-10 pt-8 border-t border-white/20">
-              <div className="flex items-center gap-2">
-                <div className="w-10 h-10 rounded-full bg-accent-500/20 flex items-center justify-center">
-                  <span className="text-accent-400 font-bold text-sm">C-10</span>
-                </div>
-                <span className="text-gray-300 text-sm">Licensed & Insured</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-10 h-10 rounded-full bg-accent-500/20 flex items-center justify-center">
-                  <span className="text-accent-400 font-bold text-sm">30+</span>
-                </div>
-                <span className="text-gray-300 text-sm">Years Experience</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <div className="w-10 h-10 rounded-full bg-accent-500/20 flex items-center justify-center">
-                  <span className="text-accent-400 text-lg">★</span>
-                </div>
-                <span className="text-gray-300 text-sm">5-Star Rated</span>
-              </div>
-            </div>
           </div>
         </div>
       </ParallaxHero>
