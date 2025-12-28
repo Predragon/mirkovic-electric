@@ -15,7 +15,7 @@ export default async function Home() {
   const content = await getPageContent('homepage', status);
 
   // Define fallback images (defaults)
-  const heroImage = getImageUrl(content, 'hero-background', '/images/hero/ev-charging-hero.webp');
+  const heroImage = getImageUrl(content, 'hero-background', '');
   const card1Image = getImageUrl(content, 'card-1', '/images/cards/general-electrical-full.webp');
   const card2Image = getImageUrl(content, 'card-2', '/images/cards/load-management-full.webp');
   const card3Image = getImageUrl(content, 'card-3', '/images/cards/smart-panels-full.webp');

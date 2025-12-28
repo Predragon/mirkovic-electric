@@ -1,4 +1,5 @@
 import { getService, getAllServiceSlugs } from '@/lib/services'
+import { getPageContent, getImageUrl, getContentStatus } from '@/lib/content'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
 
@@ -53,6 +54,11 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
     notFound()
   }
 
+  // Fetch service page content from database
+  const status = getContentStatus()
+  const content = await getPageContent(`service-${service.slug}`, status)
+  const serviceImage = getImageUrl(content, 'hero-image', '')
+
   return (
     <div className="w-full">
       {/* Page Header - Clean & Simple */}
@@ -88,13 +94,15 @@ export default async function ServicePage({ params }: { params: Promise<{ servic
             </div>
 
             {/* Image Banner - Below CTAs */}
-            <div className="mt-12">
-              <img
-                src="/images/hero/ev-charging-hero.webp"
-                alt={service.title}
-                className="w-full h-48 sm:h-64 md:h-80 object-cover rounded-lg shadow-md"
-              />
-            </div>
+            {serviceImage && (
+              <div className="mt-12">
+                <img
+                  src={serviceImage}
+                  alt={service.title}
+                  className="w-full h-48 sm:h-64 md:h-80 object-cover rounded-lg shadow-md"
+                />
+              </div>
+            )}
           </div>
         </div>
       </section>
