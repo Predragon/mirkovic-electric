@@ -91,8 +91,14 @@ export async function onRequest(context) {
     if (pageId === 'homepage') {
       // Homepage: hero-background + 6 cards (images)
       if (content['hero-background'] && content['hero-background'].type === 'image') {
+        // Replace local path references
         html = html.replace(
           /\/images\/hero\/ev-charging-hero\.webp/g,
+          content['hero-background'].value
+        );
+        // Also replace full URL references (for OG/Twitter meta tags)
+        html = html.replace(
+          /https:\/\/media\.mirkovicelectric\.com\/images\/hero\/ev-charging-hero\.webp/g,
           content['hero-background'].value
         );
       }
