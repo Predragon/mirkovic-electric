@@ -19,33 +19,18 @@ export async function getPageContent(
   const apiBaseUrl = process.env.NEXT_PUBLIC_API_URL || 'https://admin.mirkovicelectric.com';
   const url = `${apiBaseUrl}/api/public/content?page=${pageId}&status=${status}`;
 
-  console.log('='.repeat(80));
-  console.log('[getPageContent] FETCH START');
-  console.log(`  Page: ${pageId}, Status: ${status}`);
-  console.log(`  URL: ${url}`);
-  console.log('='.repeat(80));
-
   try {
     const response = await fetch(url, {
       next: { revalidate: status === 'published' ? 3600 : 0 }
     });
 
-    console.log(`[getPageContent] Response: ${response.status} ${response.statusText}`);
-
     if (!response.ok) {
-      const errorText = await response.text();
-      console.error(`[getPageContent] ❌ FETCH FAILED:`, errorText);
       return {};
     }
 
     const data = await response.json();
-    const contentKeys = Object.keys(data.content || {});
-    console.log(`[getPageContent] ✅ SUCCESS - Fetched ${contentKeys.length} items:`, contentKeys);
-
     return data.content || {};
-  } catch (error) {
-    const errorMsg = error instanceof Error ? error.message : String(error);
-    console.error(`[getPageContent] ❌ EXCEPTION:`, errorMsg);
+  } catch {
     return {};
   }
 }
@@ -74,17 +59,11 @@ export function getContentStatus(): 'draft' | 'published' {
   // For production deployments, it will be 'main'
   const branch = process.env.CF_PAGES_BRANCH;
 
-  console.log('[getContentStatus] CF_PAGES_BRANCH:', branch);
-  console.log('[getContentStatus] NEXT_PUBLIC_ENV:', process.env.NEXT_PUBLIC_ENV);
-
   // Check if we're in staging environment
   const isStaging =
     branch === 'staging' ||
     process.env.NEXT_PUBLIC_ENV === 'staging' ||
     process.env.VERCEL_ENV === 'preview';
 
-  const status = isStaging ? 'draft' : 'published';
-  console.log('[getContentStatus] Returning status:', status);
-
-  return status;
+  return isStaging ? 'draft' : 'published';
 }

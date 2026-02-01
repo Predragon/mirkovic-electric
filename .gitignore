@@ -13,3 +13,14 @@ logo-temp.png
 logo.png
 mirkovic-electric-website-rating.pdf
 generate-rating-pdf.js
+
+# Backup directories
+backup_landing/
+old_site_backup/
+*.backup
+
+# Build artifacts
+tsconfig.tsbuildinfo
+
+# Workshop/dev folders
+workshop-mcp/

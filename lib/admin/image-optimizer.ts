@@ -29,16 +29,9 @@ export async function optimizeImage(
   };
 
   try {
-    console.log('Original file:', file.name, 'Size:', (file.size / 1024).toFixed(2), 'KB');
-
     const compressedFile = await imageCompression(file, defaultOptions);
-
-    console.log('Optimized file:', compressedFile.name, 'Size:', (compressedFile.size / 1024).toFixed(2), 'KB');
-    console.log('Compression ratio:', ((1 - compressedFile.size / file.size) * 100).toFixed(1), '%');
-
     return compressedFile;
   } catch (error) {
-    console.error('Image optimization failed:', error);
     throw new Error('Failed to optimize image: ' + (error as Error).message);
   }
 }
