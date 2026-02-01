@@ -30,11 +30,11 @@ module.exports = {
           200: '#fbc5a8',
           300: '#f9a071',
           400: '#e86c2a',
-          500: '#c45a1e',  // Darkened for 4.5:1 contrast with white
-          600: '#a84d1a',
-          700: '#8c3f15',
-          800: '#703211',
-          900: '#54250d',
+          500: '#b54f19',  // Darkened for 4.5:1+ contrast with white
+          600: '#9a4316',
+          700: '#7f3712',
+          800: '#642b0e',
+          900: '#4a200a',
         },
         // Keep brand for text/neutrals
         brand: {
