@@ -63,3 +63,19 @@
     @apply outline-none ring-2 ring-accent-500 ring-offset-2;
   }
 }
+
+@layer utilities {
+  /* Shimmer animation for skeleton loaders */
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .animate-shimmer {
+    animation: shimmer 1.5s infinite;
+  }
+}

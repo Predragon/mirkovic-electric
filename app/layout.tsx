@@ -207,6 +207,14 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        {/* Cloudflare Web Analytics - tracks Core Web Vitals */}
+        {process.env.NEXT_PUBLIC_CF_ANALYTICS_TOKEN && (
+          <script
+            defer
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            data-cf-beacon={`{"token": "${process.env.NEXT_PUBLIC_CF_ANALYTICS_TOKEN}"}`}
+          />
+        )}
       </body>
     </html>
   )

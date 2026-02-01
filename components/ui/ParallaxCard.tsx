@@ -15,6 +15,7 @@ interface ParallaxCardProps {
 export default function ParallaxCard({ href, imageSrc, imageAlt, title, description }: ParallaxCardProps) {
   const cardRef = useRef<HTMLAnchorElement>(null)
   const [offset, setOffset] = useState(0)
+  const [imageLoaded, setImageLoaded] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,8 +44,16 @@ export default function ParallaxCard({ href, imageSrc, imageAlt, title, descript
     <Link ref={cardRef} href={href} className="group block">
       <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:-translate-y-1">
         <div className="relative h-52 overflow-hidden">
+          {/* Skeleton loader */}
+          {!imageLoaded && (
+            <div className="absolute inset-0 bg-gray-200 animate-pulse">
+              <div className="absolute inset-0 bg-gradient-to-r from-gray-200 via-gray-100 to-gray-200 animate-shimmer" />
+            </div>
+          )}
           <div
-            className="absolute inset-0 w-full h-[120%] -top-[10%]"
+            className={`absolute inset-0 w-full h-[120%] -top-[10%] transition-opacity duration-300 ${
+              imageLoaded ? 'opacity-100' : 'opacity-0'
+            }`}
             style={{
               transform: `translateY(${offset}px) translateZ(0)`,
               transition: 'transform 0.1s ease-out',
@@ -56,6 +65,7 @@ export default function ParallaxCard({ href, imageSrc, imageAlt, title, descript
               alt={imageAlt}
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-500"
+              onLoad={() => setImageLoaded(true)}
             />
           </div>
           <div className="absolute inset-0 bg-gradient-to-t from-navy-900/60 to-transparent" aria-hidden="true" />
