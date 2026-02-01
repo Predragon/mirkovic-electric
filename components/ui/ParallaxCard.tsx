@@ -46,8 +46,9 @@ export default function ParallaxCard({ href, imageSrc, imageAlt, title, descript
           <div
             className="absolute inset-0 w-full h-[120%] -top-[10%]"
             style={{
-              transform: `translateY(${offset}px)`,
-              transition: 'transform 0.1s ease-out'
+              transform: `translateY(${offset}px) translateZ(0)`,
+              transition: 'transform 0.1s ease-out',
+              willChange: 'transform',
             }}
           >
             <Image

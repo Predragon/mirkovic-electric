@@ -29,7 +29,7 @@ export default function ParallaxHero({ imageSrc, imageAlt, children }: ParallaxH
       <div
         className="absolute inset-0 w-full h-[120%] -top-[10%]"
         style={{
-          transform: `translateY(${offset}px)`,
+          transform: `translateY(${offset}px) translateZ(0)`,
           willChange: 'transform',
         }}
       >
