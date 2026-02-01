@@ -21,7 +21,8 @@ export default async function Home(): Promise<JSX.Element> {
     card2: getImageUrl(content, 'card-2', '/images/cards/load-management-full.webp'),
     card3: getImageUrl(content, 'card-3', '/images/cards/smart-panels-full.webp'),
     card4: getImageUrl(content, 'card-4', '/images/cards/ev-charging-full.webp'),
-    card5: getImageUrl(content, 'card-5', 'https://media.mirkovicelectric.com/images/general/permits-pge-1769951036567.webp'),
+    // Force working landscape image - portrait version causes onLoad to fail
+    card5: 'https://media.mirkovicelectric.com/images/general/permits-pge-1769951036567.webp',
     card6: getImageUrl(content, 'card-6', '/images/cards/audio-systems-full.webp'),
   }
 

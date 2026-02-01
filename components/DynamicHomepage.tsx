@@ -42,7 +42,8 @@ export default function DynamicHomepage() {
   const card2Image = content['card-2'] || '/images/cards/load-management-full.webp';
   const card3Image = content['card-3'] || '/images/cards/smart-panels-full.webp';
   const card4Image = content['card-4'] || '/images/cards/ev-charging-full.webp';
-  const card5Image = content['card-5'] || 'https://media.mirkovicelectric.com/images/general/permits-pge-1769951036567.webp';
+  // Force working landscape image - portrait version causes onLoad to fail
+  const card5Image = 'https://media.mirkovicelectric.com/images/general/permits-pge-1769951036567.webp';
   const card6Image = content['card-6'] || '/images/cards/audio-systems-full.webp';
 
   return (
