@@ -23,18 +23,18 @@ module.exports = {
           800: '#10213a',
           900: '#0a1628',
         },
-        // Orange accent (from mockup)
+        // Orange accent (adjusted for WCAG AA contrast)
         accent: {
           50: '#fef3ee',
           100: '#fde3d4',
           200: '#fbc5a8',
           300: '#f9a071',
-          400: '#f67b3e',
-          500: '#e86c2a',
-          600: '#d45a1f',
-          700: '#b04718',
-          800: '#8c3914',
-          900: '#6a2d11',
+          400: '#e86c2a',
+          500: '#c45a1e',  // Darkened for 4.5:1 contrast with white
+          600: '#a84d1a',
+          700: '#8c3f15',
+          800: '#703211',
+          900: '#54250d',
         },
         // Keep brand for text/neutrals
         brand: {

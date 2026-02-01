@@ -34,14 +34,14 @@ export default function Footer() {
             <p className="text-gray-400 text-sm">
               Modern Electrical Solutions for Today's High-Demand Properties
             </p>
-            <p className="text-gray-500 text-xs mt-2">
+            <p className="text-gray-400 text-xs mt-2">
               Licensed Bay Area Electrical Contractor Since 1991
             </p>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="font-semibold mb-4 text-accent-400 text-sm uppercase tracking-wide">Services</h4>
+            <p className="font-semibold mb-4 text-accent-400 text-sm uppercase tracking-wide">Services</p>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/services/ev-charging/" className="text-gray-400 hover:text-white transition-colors">
@@ -73,7 +73,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-4 text-accent-400 text-sm uppercase tracking-wide">Links</h4>
+            <p className="font-semibold mb-4 text-accent-400 text-sm uppercase tracking-wide">Links</p>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link href="/" className="text-gray-400 hover:text-white transition-colors">
@@ -95,7 +95,7 @@ export default function Footer() {
 
           {/* Contact - Hidden on mobile (shown at top instead) */}
           <div className="hidden md:block">
-            <h4 className="font-semibold mb-4 text-accent-400 text-sm uppercase tracking-wide">Contact</h4>
+            <p className="font-semibold mb-4 text-accent-400 text-sm uppercase tracking-wide">Contact</p>
             <ul className="space-y-3 text-sm">
               <li>
                 <a href="tel:(408)900-2672" className="text-white hover:text-accent-400 transition-colors font-semibold text-lg">
@@ -129,10 +129,10 @@ export default function Footer() {
 
         <div className="border-t border-navy-600 pt-6 md:pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-3 text-center md:text-left">
-            <p className="text-gray-500 text-sm">
+            <p className="text-gray-400 text-sm">
               &copy; {new Date().getFullYear()} Mirkovic Electric. All rights reserved.
             </p>
-            <p className="text-gray-500 text-xs">
+            <p className="text-gray-400 text-xs">
               Serving San Jose, Palo Alto, Menlo Park, Cupertino & Bay Area
             </p>
           </div>
