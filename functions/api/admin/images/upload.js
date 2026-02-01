@@ -32,7 +32,17 @@ export async function onRequestPost(context) {
 
     // Generate R2 key with timestamp to avoid caching issues
     const timestamp = Date.now();
-    const fileExtension = file.name.split('.').pop();
+
+    // Determine file extension from content type (more reliable than file.name for blobs)
+    const contentType = file.type || 'image/webp';
+    const extensionMap = {
+      'image/webp': 'webp',
+      'image/jpeg': 'jpg',
+      'image/jpg': 'jpg',
+      'image/png': 'png',
+      'image/gif': 'gif',
+    };
+    const fileExtension = extensionMap[contentType] || file.name.split('.').pop() || 'webp';
     const r2Key = `images/${category}/${imageKey}-${timestamp}.${fileExtension}`;
 
     // Upload to R2
