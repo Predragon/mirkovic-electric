@@ -158,7 +158,17 @@ Created and ran `scripts/optimize-existing-images.js`:
 - Created `docs/website-assessment.md` - full assessment and improvement recommendations
 - Updated session report with all changes
 
-### 13. PWA Support
+### 13. Content URL Sync
+
+Fixed issue where page content still referenced old `.blob` image URLs after optimization:
+- Created `scripts/sync-content-urls.js` - syncs content URLs with images table
+- Updated 6 content entries from `.blob` to `.webp` URLs
+- Published changes to production
+
+**URLs updated:**
+- hero-background, card-2, card-3, card-4, card-5, card-6
+
+### 14. PWA Support
 
 Added Progressive Web App capabilities:
 - Created `app/manifest.ts` - generates `/manifest.webmanifest`
@@ -194,6 +204,7 @@ components/home/CTASection.tsx
 components/ui/ErrorBoundary.tsx
 scripts/optimize-existing-images.js
 scripts/generate-pwa-icons.js
+scripts/sync-content-urls.js
 public/icons/icon-192.png
 public/icons/icon-512.png
 public/apple-touch-icon.png
@@ -245,6 +256,9 @@ npm run optimize-images
 
 # Regenerate PWA icons from logo
 npm run generate-icons
+
+# Sync content URLs with images table
+npm run sync-content-urls
 ```
 
 ---
