@@ -114,8 +114,14 @@ export async function onRequest(context) {
 
       cardMappings.forEach(({ key, default: defaultPath }) => {
         if (content[key] && content[key].type === 'image') {
+          const newUrl = content[key].value;
+          // Skip if URL is already in the HTML (already set by build from API)
+          if (html.includes(newUrl)) {
+            return;
+          }
+          // Only replace local paths
           const regex = new RegExp(defaultPath.replace(/\//g, '\\/'), 'g');
-          html = html.replace(regex, content[key].value);
+          html = html.replace(regex, newUrl);
         }
       });
 
