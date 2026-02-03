@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import Image from 'next/image'
 import { useState } from 'react'
 
 export default function Header() {
@@ -14,14 +13,17 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo - Centered on mobile, left on desktop */}
           <Link href="/" className="flex flex-col items-center md:items-start flex-shrink-0 mx-auto md:mx-0">
-            <Image
-              src="/images/logo-full.webp"
-              alt="Mirkovic Electric - Licensed Bay Area Electrician"
-              width={400}
-              height={80}
-              className="h-14 sm:h-16 md:h-20 lg:h-24 w-auto"
-              priority
-            />
+            <picture>
+              <source media="(max-width: 768px)" srcSet="/images/logo-mobile.webp" />
+              <img
+                src="/images/logo-full.webp"
+                alt="Mirkovic Electric - Licensed Bay Area Electrician"
+                width={400}
+                height={80}
+                className="h-14 sm:h-16 md:h-20 lg:h-24 w-auto"
+                fetchPriority="high"
+              />
+            </picture>
             <span className="text-gray-400 text-xs sm:text-sm mt-1 hidden sm:block">
               Licensed Bay Area Electrician Since 1991
             </span>

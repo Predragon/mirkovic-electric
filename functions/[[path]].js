@@ -87,19 +87,34 @@ export async function onRequest(context) {
     // Get the HTML
     let html = await response.text();
 
+    // Helper to derive mobile image URL (adds -mobile before extension)
+    function getMobileUrl(url) {
+      const lastDot = url.lastIndexOf('.');
+      if (lastDot === -1) return url;
+      return url.slice(0, lastDot) + '-mobile' + url.slice(lastDot);
+    }
+
     // Inject content based on page type
     if (pageId === 'homepage') {
       // Homepage: hero-background + 6 cards (images)
       if (content['hero-background'] && content['hero-background'].type === 'image') {
-        // Replace local path references
+        const heroUrl = content['hero-background'].value;
+        const heroMobileUrl = getMobileUrl(heroUrl);
+
+        // Replace desktop hero image
         html = html.replace(
           /\/images\/hero\/ev-charging-hero\.webp/g,
-          content['hero-background'].value
+          heroUrl
+        );
+        // Replace mobile hero image (srcset in picture element)
+        html = html.replace(
+          /\/images\/hero\/ev-charging-hero-mobile\.webp/g,
+          heroMobileUrl
         );
         // Also replace full URL references (for OG/Twitter meta tags)
         html = html.replace(
           /https:\/\/media\.mirkovicelectric\.com\/images\/hero\/ev-charging-hero\.webp/g,
-          content['hero-background'].value
+          heroUrl
         );
       }
 

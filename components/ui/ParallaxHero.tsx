@@ -1,7 +1,6 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import Image from 'next/image'
 
 interface ParallaxHeroProps {
   imageSrc: string
@@ -9,9 +8,17 @@ interface ParallaxHeroProps {
   children: React.ReactNode
 }
 
+// Derive mobile image URL by adding -mobile before extension
+function getMobileImageSrc(src: string): string {
+  const lastDot = src.lastIndexOf('.')
+  if (lastDot === -1) return src
+  return src.slice(0, lastDot) + '-mobile' + src.slice(lastDot)
+}
+
 export default function ParallaxHero({ imageSrc, imageAlt, children }: ParallaxHeroProps) {
   const [offset, setOffset] = useState(0)
   const [imageLoaded, setImageLoaded] = useState(false)
+  const mobileSrc = getMobileImageSrc(imageSrc)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,14 +50,16 @@ export default function ParallaxHero({ imageSrc, imageAlt, children }: ParallaxH
           willChange: 'transform',
         }}
       >
-        <Image
-          src={imageSrc}
-          alt={imageAlt}
-          fill
-          className="object-cover"
-          priority
-          onLoad={() => setImageLoaded(true)}
-        />
+        <picture>
+          <source media="(max-width: 768px)" srcSet={mobileSrc} />
+          <img
+            src={imageSrc}
+            alt={imageAlt}
+            className="absolute inset-0 w-full h-full object-cover"
+            onLoad={() => setImageLoaded(true)}
+            fetchPriority="high"
+          />
+        </picture>
       </div>
 
       {/* Dark Overlay */}
