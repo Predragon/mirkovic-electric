@@ -101,12 +101,12 @@ export async function onRequest(context) {
         const heroUrl = content['hero-background'].value;
         const heroMobileUrl = getMobileUrl(heroUrl);
 
-        // Replace desktop hero image
+        // Replace desktop hero image (in img src and preload)
         html = html.replace(
           /\/images\/hero\/ev-charging-hero\.webp/g,
           heroUrl
         );
-        // Replace mobile hero image (srcset in picture element)
+        // Replace mobile hero image (srcset in picture element and preload)
         html = html.replace(
           /\/images\/hero\/ev-charging-hero-mobile\.webp/g,
           heroMobileUrl

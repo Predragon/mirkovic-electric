@@ -188,6 +188,14 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.png" type="image/png" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta name="theme-color" content="#1e3a5f" />
+        {/* Preload hero image for mobile LCP optimization */}
+        <link
+          rel="preload"
+          href="/images/hero/ev-charging-hero-mobile.webp"
+          as="image"
+          type="image/webp"
+          media="(max-width: 768px)"
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
